@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunscreen Reapply Timer</title>
+    <link rel="stylesheet" href="timer.css">
+    <script src="timer.js" defer></script>
+</head>
+<body>
+    <p>Select UV Level:
+        <select id="uvLevelSelect">
+            <option value="" disabled selected>Select UV Level</option>
+            <option value="low-moderate">Low - Moderate</option>
+            <option value="high">High</option>
+            <option value="very high-extreme">Very High - Extreme</option>
+        </select>
+    </p>
+    <p>Time until next sunscreen reapplication: <span id="time">00:00</span></p>
+    <div class="button-container">
+        <button id="restartButton">Restart</button>
+        <button id="stopButton">Stop</button>
+</body>
+</html>

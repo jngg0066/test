@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #EDEBDD; /* Set desired background color */
+}
+
+/* Apply the same styles for the navigation bar */
+nav {
+    background-color: #EDEBDD;
+    color: #D18585;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* Adjust logo styles */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px; /* Set desired width */
+    height: auto;
+    margin-right: 0px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #D18585;
+    margin-right: 50px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.center-text h2 {
+    font-size: 1.5em; /* Adjust the size as needed */
+    font-weight: bolder; /* Remove bold styling */
+}
+
+.center-text h3 {
+    font-size: 1.4em;
+    font-weight: bolder;
+}
+.center-text p {
+    font-size: 0.9em; /* Adjust the size as needed */
+}
+
+.columns-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.column {
+    width: 45%;
+    padding: 20px;
+    background-color: #EDEBDD;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.column h3 {
+    margin-top: 0;
+}
+
+.column img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+.column p {
+    text-align: center;
+}
+.column ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.column ul li {
+    margin-bottom: 10px;
+}
+
+.column ul li::before {
+    content: "\2022";
+    color: #000000;
+    font-weight: bold;
+    display: inline-block;
+    width: 1;
+    margin-left: -1em;
+}
+
+/* Footer styles */
+footer {
+    background-color: #7DA19D; /* The color you want for your footer */
+    padding: 20px 0; /* Adjust padding as needed */
+    display: flex; /* Enable flexbox for layout */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Align the items vertically */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Footer link styles */
+footer a {
+    text-decoration: none;
+    color: #fff; /* Set text color for footer links */
+    margin: 0 10px; /* Adjust margin to add spacing between links */
+}

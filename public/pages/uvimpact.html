@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UV Impact Data - Sunrise Parry</title>
+    <link rel="stylesheet" href="..\assets\css\uvimpact.css">
+
+    <!-- Highcharts scripts -->
+    <link rel="stylesheet" href="..\assets\component\uvgraph\uvgraph.css">
+    <link rel="stylesheet" href="..\assets\component\skingraph\skingraph.css">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <!-- Highcharts configuration and data -->
+    <script src="..\assets\component\uvgraph\uvgraph.js" defer></script>
+    <script src="..\assets\component\skingraph\skingraph.js" defer></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <img src="..\assets\images\logo.png" alt="Sunrise Parry Logo">
+            <h1>Sunrise Parry</h1>
+        </div>
+        <ul>
+            <li><a href="..\..\index.html">Home</a></li>
+            <li><a href="weatherinfo.html">Weather</a></li>
+            <li><a href="uvimpact.html">UV Impact</a></li>
+            <li><a href="protection.html">Protection</a></li>
+            <li><a href="reminder.html">Reminder</a></li>
+            <li><a href="contact.html"> Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="text-container">
+            <h1>Data about UV impacts</h1>
+        </div>
+        <div class="division1"></div>
+
+    <!-- Two-column container -->
+        <div class="two-column-container1">
+            <div class="column1">
+                <div class="heading">UV penetration into the layers of the skin</div>
+                <img src="..\assets\images\UV2_50.png" alt="UV2_50">
+            </div>
+            <div class="column2">
+                <p>The Sun's ultraviolet (UV) radiation is classified into three categories according to wavelength:</p>
+                <p class="option">- UVA</p>
+                <p class="option">- UVB</p>
+                <p class="option">- UVC</p>
+                <p>UVA radiation possesses the greatest wavelength and is linked to the process of skin aging, whereas UVB radiation possesses a shorter wavelength and is related to skin burning. The Earth's ozone layer predominantly absorbs UVC radiation, preventing it from reaching the Earth's surface. Extended exposure to UVA and UVB radiation can result in multiple dermatological conditions, such as sunburn, premature skin aging, and perhaps skin cancer. It is crucial to shield your skin from UV rays throughout the year, not only in the summer or when you are at the beach.</p>
+            </div>
+        </div>
+        <div class="division2"></div>
+        <div class="two-column-container2">
+            <div class="column1">
+                <div class="heading">UV Trend From 2014-2022</div>
+                <p> The stacked bar chart shows the average UV index from 2013 to 2022 for different seasons in Melbourne.</p>
+                <figure class="highcharts-figure">
+                    <div id="container1"></div>
+                </figure>
+            </div>
+            <div class="column2">
+                <div class="heading">Skin Cancer Trend From 2013-2023</div>
+                <p> The line graphs shows mortality count of Melonoma and Non- melonoma cancer in Australia from 2013 to 2023</p>
+                <figure class="highcharts-figure">
+                    <div id="container2"></div>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <a href="index.html">Home</a>
+            <a href="..\public\pages\weatherinfo.html">Weather</a>
+            <a href="..\public\pages\uvimpact.html">UV Impact</a>
+            <a href="..\public\pages\protection.html">Protection</a>
+            <a href="..\public\pages\reminder.html">Reminder</a>
+            <a href="..\public\pages\contact.html">Contact Us</a>
+        </div>
+    </footer>
+</body>
+</html>

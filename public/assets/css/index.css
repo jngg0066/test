@@ -1,0 +1,161 @@
+/* Resetting default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #EDEBDD;
+}
+
+/* Navigation bar styles */
+nav {
+    background-color: #EDEBDD;
+    color: #D18585;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* Logo styles */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px; /* Set desired width */
+    height: auto;
+    margin-right: 0px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #D18585;
+    margin-right: 50px;
+}
+
+/* Content styles */
+.content {
+    margin-top: 50px;
+    text-align: center;
+    position: relative; /* Position relative to contain the absolutely positioned divider */
+}
+
+.content img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 400px; /* Set maximum height for the image */
+}
+
+
+/* White division strip */
+.division1 {
+    margin-top: 100px;
+    margin-bottom: 60px;
+    background-color: white;
+    height: 20px; /* Adjust height as needed */
+}
+
+.division2 {
+    margin-top: 60px;
+    margin-bottom: 100px;
+    background-color: white;
+    height: 20px; /* Adjust height as needed */
+}
+
+/* Two-column container styles */
+.two-column-container {
+    display: flex;
+}
+
+.column1 {
+    flex: 1;
+    padding: 20px; /* Adjust padding as needed */
+    background-color: #EDEBDD; /* Set your desired background color for odd columns */
+    color: #333;
+    font-family: Kufam;
+    font-weight: Bold;
+    font-size: 40px;
+    align-items: center;
+    text-align: center; /* Center-align the text */
+    box-sizing: border-box;
+}
+
+
+.column2 {
+    flex: 1;
+    padding: 20px; /* Adjust padding as needed */
+    background-color: #EDEBDD; /* Set your desired background color for even columns */
+    color: #000000; /* Set text color for even columns */
+    font-family: Kufam;
+    font-size: 20px;
+    align-items: center;
+}
+
+.column2 p {
+    margin-bottom: 10px; /* Add margin to create space between paragraphs */
+}
+
+.column2 p:first-child {
+    margin-bottom: 20px; /* Add margin to the bottom of the first <p> element */
+}
+
+
+/* Three-column container styles */
+.three-column-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px; /* Adjust margin as needed */
+}
+
+/* Column styles */
+.column {
+    flex: 1;
+    text-align: center;
+}
+
+.column img {
+    width: 100%; /* Ensure images take up full width of their container */
+    max-width: 300px; /* Adjust maximum width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #7DA19D; /* The color you want for your footer */
+    padding: 20px 0; /* Adjust padding as needed */
+    display: flex; /* Enable flexbox for layout */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Align the items vertically */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Footer link styles */
+footer a {
+    text-decoration: none;
+    color: #fff; /* Set text color for footer links */
+    margin: 0 10px; /* Adjust margin to add spacing between links */
+}
+
