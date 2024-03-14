@@ -23,19 +23,41 @@
     </nav>
 
     <!-- Content for Services Page -->
-    <div class="center-text">
-        <h2>Sun Protection</h2>
-        <p>Australia is known for its higher average UV index compared to many other regions, underscoring the importance of sun protection measures even at relatively lower UV thresholds, such as 6-7. The emphasis on protective clothing and sunscreen usage aligns closely with the heightened sun exposure typically experienced in Australia. Sun protection is essential to prevent skin damage and reduce the risk of skin cancer. Exposure to ultraviolet (UV) radiation from the sun can cause sunburn, premature aging, and skin cancer. Wearing protective clothing and using sunscreen helps to block harmful UV rays and keep your skin safe. Don't forget to reapply sunscreen every two hours, especially after swimming or sweating, and seek shade during peak sun hours to further protect your skin.</p>
-    </div>
-    
-
-    <!-- Columns Container -->
-    <div class="columns-container">
-        <!-- Protective Clothing Column -->
-        <div class="column">
-            <h3 style="text-align: center;">Protective Clothing</h3>
-            <img src="..\assets\images\protcloth.png" alt="Protective Clothing Image">
-            <ul>
+    <!-- Content -->
+    <div class="content">
+        <div class="text-container">
+            <h1>Sun Protection</h1>
+        </div>
+        <div class="division1"></div>
+        <!-- Two-column container -->
+        <div class="two-column-container1">
+            <div class="column1">
+                <img src="..\assets\images\protcloth.png" alt="UV2_50">
+            </div>
+            <div class="column2">
+                <p>Australia is known for its higher average UV index compared to many other 
+                    regions, underscoring the importance of sun protection measures even at
+                    relatively lower UV thresholds, such as 6-7. The emphasis on protective 
+                    clothing and sunscreen usage aligns closely with the heightened sun 
+                    exposure typically experienced in Australia. </p>
+                <p>
+                    Sun protection is essential to prevent skin damage and reduce the risk of 
+                    skin cancer. Exposure to  ultraviolet (UV) radiation from the sun can cause 
+                    sunburn, premature aging, and skin cancer.
+                </p>
+                <p>
+                    Wearing protective clothing and using sunscreen helps to block harmful UV 
+                    rays and keep your skin safe. Don't forget to reapply sunscreen every two hours, 
+                    especially after swimming or sweating, and seek shade during peak sun hours 
+                    to further protect your skin.
+                </p>
+            </div>
+        </div>
+        <div class="division2"></div>
+        <!-- Separate Container for Sun Protection Guidelines -->
+        <div class="sun-container">
+            <h2>Clothing Guidelines</h2>
+            <ul class="sun-guidelines">
                 <li><strong>Low (1-2):</strong> Sunburn is unlikely, but minimal protection like a hat and sunglasses might be beneficial, especially for sensitive individuals. Protective clothing is not typically necessary.</li>
                 <li><strong>Moderate (3-5):</strong> Sunburn is possible, especially for prolonged exposure. Seek shade during peak sun hours (10 AM to 4 PM). Broad-spectrum SPF 30+ sunscreen and protective clothing are highly recommended, especially for those with fair skin or a history of sunburn.</li>
                 <li><strong>High (6-7):</strong> Sunburn is very likely for unprotected skin. Seek shade, wear protective clothing, a wide-brimmed hat, and sunglasses. Broad-spectrum SPF 30+ sunscreen is essential, and reapplication is crucial.</li>
@@ -43,30 +65,34 @@
                 <li><strong>Extreme (11+):</strong> Avoid prolonged sun exposure. If outdoors, wear maximum protection with clothing, hat, sunglasses, and broad-spectrum SPF 50+ sunscreen reapplied frequently.</li>
             </ul>
         </div>
-
-        <!-- Sunscreen Calculator Column -->
-        <div class="column">
-            <h3 style="text-align: center;">Sunscreen Recommendations</h3>
-            <iframe src="..\assets\component\suncalc\calc.html" style="width:90%; height:390px;" frameborder="0"></iframe>
-
-            <ul>
-                <p><u><strong>Below are factors that should also be taken into account when applying sunscreen.</strong></u></p>
-                <li><strong>Individual factors:</strong> Skin type (fairer skin requires more), skin sensitivity, and medical conditions all significantly impact how much sunscreen is necessary.</li>
-                <li><strong>Activity level:</strong> Sweating and being in water wash off sunscreen, requiring more frequent application and potentially a higher quantity.</li>
-                <li><strong>Application method:</strong> Applying sunscreen unevenly or missing areas can leave you vulnerable to sunburn, regardless of the amount used.</li>
-                <li><strong>Sun exposure duration:</strong> Spending more time in the sun necessitates reapplication and potentially more sunscreen initially.</li>
-            </ul>
+        <div class="division2"></div>
+        <div class="two-column-container2">
+            <div class="column3">
+                <h3 style="text-align: center;">Sunscreen Recommendations</h3>
+                <p> Enter your desired UV level</p>
+                <iframe src="..\assets\component\suncalc\calc.html" style="width:90%; height:390px;" frameborder="0"></iframe>
+                </div>
+            <div class="column4">
+                <ul>
+                    <p><u><strong>Below are factors that should also be taken into account when applying sunscreen.</strong></u></p>
+                    <li><strong>Individual factors:</strong> Skin type (fairer skin requires more), skin sensitivity, and medical conditions all significantly impact how much sunscreen is necessary.</li>
+                    <li><strong>Activity level:</strong> Sweating and being in water wash off sunscreen, requiring more frequent application and potentially a higher quantity.</li>
+                    <li><strong>Application method:</strong> Applying sunscreen unevenly or missing areas can leave you vulnerable to sunburn, regardless of the amount used.</li>
+                    <li><strong>Sun exposure duration:</strong> Spending more time in the sun necessitates reapplication and potentially more sunscreen initially.</li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <footer>
-        <div class="footer-content">
-            <a href="index.html">Home</a>
-            <a href="..\public\pages\weatherinfo.html">Weather</a>
-            <a href="..\public\pages\uvimpact.html">UV Impact</a>
-            <a href="..\public\pages\protection.html">Protection</a>
-            <a href="..\public\pages\reminder.html">Reminder</a>
-            <a href="..\public\pages\contact.html">Contact Us</a>
-        </div>
-    </footer>  
-</body>
-</html>
+        <footer>
+            <div class="footer-content">
+                <a href="index.html">Home</a>
+                <a href="..\public\pages\weatherinfo.html">Weather</a>
+                <a href="..\public\pages\uvimpact.html">UV Impact</a>
+                <a href="..\public\pages\protection.html">Protection</a>
+                <a href="..\public\pages\reminder.html">Reminder</a>
+                <a href="..\public\pages\contact.html">Contact Us</a>
+            </div>
+        </footer>
+    </body>
+    </html>
+
+

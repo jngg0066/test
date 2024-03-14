@@ -1,14 +1,21 @@
-body {
-    font-family: Arial, sans-serif;
+/* Resetting default margins and paddings */
+* {
     margin: 0;
     padding: 0;
-    background-color: #EDEBDD; /* Set desired background color */
+    box-sizing: border-box;
 }
 
-/* Apply the same styles for the navigation bar */
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #EDEBDD; /* Set your desired background color */
+    text-align: center; /* Center align text */
+}
+
+/* Navigation bar styles */
 nav {
-    background-color: #EDEBDD;
-    color: #D18585;
+    background-color: #EDEBDD; /* Set your desired background color */
+    color: #D18585; /* Set your desired text color */
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -26,10 +33,10 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #000000;
+    color: #000000; /* Set desired text color */
 }
 
-/* Adjust logo styles */
+/* Logo styles */
 .logo {
     display: flex;
     align-items: center;
@@ -42,73 +49,177 @@ nav ul li a {
 }
 
 .logo h1 {
-    font-size: 24px;
+    font-size: 24px; /* Set desired font size */
     color: #D18585;
     margin-right: 50px;
 }
-
-.center-text {
-    text-align: center;
+.right-column {
+    margin-top: 20px; /* Add margin to separate content */
 }
 
-.center-text h2 {
-    font-size: 1.5em; /* Adjust the size as needed */
-    font-weight: bolder; /* Remove bold styling */
+.text-container {
+    margin-bottom: 20px; /* Add margin below text container */
+    padding: 20px; /* Add padding to create space around the content */
+    text-align: center; /* Center the content horizontally */
 }
 
-.center-text h3 {
-    font-size: 1.4em;
-    font-weight: bolder;
-}
-.center-text p {
-    font-size: 0.9em; /* Adjust the size as needed */
+.text-container p {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px; /* Add margin below text container */
+    padding: 5px; /* Add padding to create space around the content */
+    text-align: center; /* Center the content horizontally */
 }
 
-.columns-container {
+.two-column-container1 {
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
-    margin-top: 20px;
-}
+    align-items: flex-start; /* Center the columns horizontally */
+    margin-top: 20px; /* Adjust margin as needed */
+  }
 
-.column {
-    width: 45%;
-    padding: 20px;
-    background-color: #EDEBDD;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+  .column1 {
+    flex: 1;
+    width: 50%; /* Set columns to take up half of the width */
+    margin-bottom: 10px; /* Add margin between columns */
+    text-align: center; /* Center-align content */
+  }
 
-.column h3 {
-    margin-top: 0;
-}
-
-.column img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
+  .column1 img {
+    width: 80%; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper centering */
+    margin-top: 30px;
     margin-bottom: 10px;
-}
-.column p {
-    text-align: center;
-}
-.column ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
+    margin-left: 60px;
+    margin-right: 10px;
+  }
+  
+  .column2 {
+    flex: 1;
+    width: 50%; /* Set columns to take up half of the width */
+    margin-bottom: 5px; /* Add margin between columns */
+    font-size: 16px; /* Adjust font size as needed */
+    text-align: left; /* Align text to the left */
+    margin-left: auto; /* Shift the text to the left */
+    margin-right: auto; /* Center the column horizontally */
+    max-width: 600px;
+  }
 
-.column ul li {
+  .column2 p {
+    font-size: 16px;
+    margin-top: 30px;
     margin-bottom: 10px;
+    margin-right: 10%;
+    
 }
 
-.column ul li::before {
+.sun-container {
+    background-color: #EDEBDD; /* Set desired background color */
+    padding: 20px; /* Add padding to the container */
+    margin-top: 30px; /* Adjust margin as needed */
+    border-radius: 10px; /* Add border radius for rounded corners */
+}
+
+.sun-container h2 {
+    font-size: 24px; /* Set desired font size for the heading */
+    color: #333333; /* Set desired text color */
+    margin-bottom: 20px; /* Add space below the heading */
+}
+
+.sun-guidelines {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin-right: 20px;
+    margin-left: 80px;
+}
+
+.sun-guidelines li {
+    margin-bottom: 15px; /* Add space between list items */
+    text-align: left; /* Center-align the options */
+
+}
+
+.sun-guidelines li strong {
+    font-weight: bold; /* Make the strong text bold */
+    color: #000000; /* Set desired color for strong text */
+}
+
+.two-column-container2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* Center the columns horizontally */
+    margin-top: 20px; /* Adjust margin as needed */
+  }
+
+  .column3 {
+    flex: 1;
+    width: 50%; /* Set columns to take up half of the width */
+    margin-bottom: 10px; /* Add margin between columns */
+    text-align: center; /* Center-align content */
+  }
+
+  .column3 p {
+    margin-top: 10px; /* Add margin between columns */
+    text-align: center; /* Center-align content */
+  }
+
+  .column3 img {
+    width: 80%; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper centering */
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 60px;
+    margin-right: 10px;
+  }
+  
+  .column4 {
+    flex: 1;
+    width: 50%; /* Set columns to take up half of the width */
+    margin-bottom: 5px; /* Add margin between columns */
+    font-size: 16px; /* Adjust font size as needed */
+    text-align: left; /* Align text to the left */
+    margin-left: auto; /* Shift the text to the left */
+    margin-right: auto; /* Center the column horizontally */
+    max-width: 600px;
+  }
+
+  .column4 p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    margin-right: 10%;
+    text-align: center; /* Center-align the options */
+}
+
+.column4 ul li {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: left; /* Center-align the options */
+}
+
+.column4 ul li::before {
     content: "\2022";
     color: #000000;
     font-weight: bold;
     display: inline-block;
     width: 1;
     margin-left: -1em;
+}
+
+.division1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: white;
+    height: 20px; /* Adjust height as needed */
+}
+
+.division2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: white;
+    height: 20px; /* Adjust height as needed */
 }
 
 /* Footer styles */
