@@ -59,7 +59,6 @@ nav ul li a:hover {
     background-color: #747474; /* Change box color on hover */
 }
 
-nav ul li a.clicked {
-    background-color: #666; /* Change box color when clicked */
-    text-decoration: underline; /* Underline text when clicked */
+nav ul li a.active {
+    text-decoration: underline;
 }
