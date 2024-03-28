@@ -1,0 +1,60 @@
+/* home.css */
+.homenews {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.homenews-content {
+  background-color: #fefefe;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 800px; /* Set maximum width if needed */
+  display: flex; /* Use flexbox for layout */
+}
+
+.homenews-close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.homenews-close:hover,
+.homenews-close:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+.popup-content {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically center items */
+}
+
+.popup-image {
+  flex: 1; /* Take 50% of the width */
+}
+
+.popup-text h2 {
+  margin-top: 0; /* Remove default margin */
+}
+
+.popup-text p {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;  
+  text-align: left;  
+  margin-top: 40px; 
+  margin-right: 50px;
+}
+
+
