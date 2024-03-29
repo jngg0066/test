@@ -116,6 +116,8 @@ html {
     text-align: center;  
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-right: 40px;
+    margin-left: 40px;
 }
 
 .news-title p {
