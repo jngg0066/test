@@ -72,7 +72,7 @@ html {
 
 .section4 {
     background: #F5F1F1;
-    height:800px;
+    height:1100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,7 +88,7 @@ html {
     font-size: 32px;
     text-transform: uppercase;
     letter-spacing: 8px;
-    margin-top: 50px;
+    margin: 20px;
     margin-bottom: 100px;
 }
 
@@ -110,7 +110,7 @@ html {
 
 .news-title h2 {
     font-family: "Raleway", sans-serif;
-    font-size: 12px;  
+    font-size: 14px;  
     letter-spacing: 1px;
     text-transform: none;  
     text-align: center;  
@@ -137,6 +137,7 @@ html {
     border: 1px solid #000000; 
     border-radius: 0px;
     padding: 10px;
+    margin-bottom: 20px;
     transition: background-color 0.3s ease;
 }
 
