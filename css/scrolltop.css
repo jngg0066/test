@@ -1,17 +1,18 @@
 #scrollupbtn {
-    display: none; /* Hide the button by default */
-    position: fixed; /* Fixed position to keep the button visible */
-    bottom: 20px; /* Adjust as needed */
-    right: 20px; /* Adjust as needed */
-    background-color: #db719a; /* Button background color */
-    color: #fff; /* Text color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Round corners */
-    padding: 10px 20px; /* Padding for the button */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Show pointer cursor on hover */
+    display: none;  
+    position: fixed;  
+    bottom: 20px;  
+    right: 20px;  
+    background-color: #db719a;  
+    color: #ffffff;  
+    border: none; 
+    border-radius: 5px;  
+    padding: 10px 20px;  
+    cursor: pointer;  
 }
 
 #scrollupbtn:hover {
-    background-color: #0056b3; /* Darker background color on hover */
+    background-color: #6d5757;  
+    color: #ffffff;  
+    border-color: #db719a;
 }
