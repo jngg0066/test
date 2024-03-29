@@ -46,8 +46,17 @@
 
 .popup-image {
   flex: 1; /* Take up all available space */
-  max-width: 50%; /* Limit the width to half of the popup */
-  height: auto; /* Maintain aspect ratio */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
+
+.popup-image img {
+  width: 300px; /* Ensure the image covers the entire width */
+  height: 300px; /* Ensure the image covers the entire height */
+  object-fit: cover; /* Maintain aspect ratio and cover the entire space */
+  margin-top: 30px; 
+  margin-bottom: 30px;
 }
 
 .popup-text {
@@ -55,8 +64,8 @@
 }
 
 .popup-text h2 {
-  margin-top: 30px; 
   font-size: 15px;
+  margin-top: 30px; 
   margin-right: 50px;
   margin-left: 10px;
 }
