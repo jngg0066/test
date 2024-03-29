@@ -74,7 +74,7 @@ html {
 
 .section4 {
     background: #F5F1F1;
-    height:600px;
+    height:800px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,7 +96,52 @@ html {
 
 .popup-container {
     display: flex;
+    flex-wrap: wrap; 
     justify-content: space-between;  
     width: 80%;  
     margin: 0 auto;
+}
+
+.popup-item {
+    flex: 0 0 calc(33.33% - 20px);  
+    margin-bottom: 20px; 
+    text-align: center; /* Center align content */
+
+}
+
+.news-title h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 12px; /* Adjust font size as needed */
+    letter-spacing: 1px;
+    text-transform: none; /* Remove uppercase transformation */
+    text-align: center; /* Center the text */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.news-title p {
+    font-family: "Raleway", sans-serif;
+    font-size: 12px; /* Adjust font size as needed */
+    letter-spacing: 1px;
+    text-transform: none; /* Remove uppercase transformation */
+    text-align: center; /* Center the text */
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.learn-more-btn {
+    font-family: "Raleway", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #000000; 
+    border-radius: 0px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    color: #ffffff;
+    background-color: #000000;
 }

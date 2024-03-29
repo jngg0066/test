@@ -1,0 +1,12 @@
+<!-- Second popup-item -->
+<div class="popup-item">
+    <img id="openPopup1" src="../assets/images/news1.png" alt="Click to open popup">
+    <div class="news-title"> 
+        <h2>Second News Title</h2> 
+        <p>By Author Name</p>
+    </div>
+    <!-- Button to open popup -->
+    <button id="openPopupButton2" class="learn-more-btn">Learn More</button>
+</div>
+</div>
+</div>

@@ -4,10 +4,25 @@ var homenewsModals = document.querySelectorAll(".homenews");
 // Get the images that open the homenews modals
 var openPopupImgs = document.querySelectorAll("[id^='openPopup']");
 
+// Get the buttons that open the homenews modals
+var openPopupButtons = document.querySelectorAll("[id^='openPopupButton']");
+
+// Function to show modal by index
+function showModal(index) {
+    homenewsModals[index].style.display = "block";
+}
+
 // Loop through each image and attach onclick event
 openPopupImgs.forEach(function(image, index) {
     image.onclick = function() {
-        homenewsModals[index].style.display = "block";
+        showModal(index);
+    }
+});
+
+// Loop through each button and attach onclick event
+openPopupButtons.forEach(function(button, index) {
+    button.onclick = function() {
+        showModal(index);
     }
 });
 

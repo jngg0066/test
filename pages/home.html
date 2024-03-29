@@ -6,11 +6,11 @@
     <title>Web Title - Home</title>
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/homenews.css"> 
-
 </head>
 <body>
     <div id="header"></div>
     <script src="../js/fetchheader.js"></script>
+    
     <section class="sectionWel">
         <h1>Welcome!</h1> 
         <p>
@@ -21,14 +21,25 @@
             Integer sodales lorem nec quam bibendum, et volutpat dui gravida. 
         </p>
     </section>
+    
     <section class="section1">Picture/Slogan</section>
     <section class="section2">Something for info page</section>
     <section class="section3">Connectioning Suburban Portal </section>
     <section class="section4">
         <h1>News article</h1>
         <div class="popup-container">
-            <div>
+            <!-- First popup-item -->
+            <div class="popup-item">
+                <!-- Image for the first popup -->
                 <img id="openPopup1" src="../assets/images/news1.png" alt="Click to open popup">
+                <!-- News title for the first popup -->
+                <div class="news-title"> 
+                    <h2>Most Challenges faced by Australian Immigrants</h2> 
+                    <p> By Expatlawyers</p>
+                </div>
+                <!-- Button to open the first popup -->
+                <button id="openPopupButton1" class="learn-more-btn">Learn More</button>
+                <!-- Modal for the first popup -->
                 <div id="homenewsModal1" class="homenews">
                     <!-- Popup content -->
                     <div class="homenews-content">
@@ -41,75 +52,48 @@
                                     further understand the challenges faced by Australian 
                                     immigrants as they navigate integration into their new society.
                                 </p>
-                                <a href="article_link_here" class="read-more-btn">Read More</a>
+                                <a href="https://expatlawyers.com.au/most-challenges-faced-by-australian-immigrants/" class="read-more-btn">Read More</a>
                             </div>
                             <div class="popup-image">
                                 <img src="../assets/images/news1.png" alt="News Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Second popup-item -->
+            <div class="popup-item">
+                <!-- Image for the second popup -->
+                <img id="openPopup2" src="../assets/images/news2.png" alt="Click to open popup">
+                <!-- News title for the second popup -->
+                <div class="news-title"> 
+                    <h2>7 Common Hurdles Faced By New Australian Visa Holders, And How To Overcome Them</h2> 
+                    <p> By AHWC</p>
+                </div>
+                <!-- Button to open the second popup -->
+                <button id="openPopupButton2" class="learn-more-btn">Learn More</button>
+                <!-- Modal for the second popup -->
+                <div id="homenewsModal2" class="homenews">
+                    <!-- Popup content -->
+                    <div class="homenews-content">
+                        <span class="homenews-close">&times;</span>
+                        <div class="popup-content">
+                            <div class="popup-text">
+                                <h2>7 Common Hurdles Faced By New Australian Visa Holders, And How To Overcome Them</h2>
+                                <p>Content for the second article goes here.</p>
+                                <a href="#" class="read-more-btn">Read More</a>
+                            </div>
+                            <div class="popup-image">
+                                <img src="../assets/images/news2.png" alt="News Image">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div>
-                <img id="openPopup2" src="../assets/images/news1.png" alt="Click to open popup">
-                <div id="homenewsModal1" class="homenews">
-                    <!-- Popup content -->
-                    <div class="homenews-content">
-                        <span class="homenews-close">&times;</span>
-                        <div class="popup-content">
-                            <div class="popup-text">
-                                <h2>News Title 1</h2>
-                                <p>Some text in the Homenews Popup 2...</p>
-                            </div>
-                            <div class="popup-image">
-                                <img src="../assets/images/news1.png" alt="News Image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <img id="openPopup3" src="../assets/images/news1.png" alt="Click to open popup">
-                <div id="homenewsModal1" class="homenews">
-                    <!-- Popup content -->
-                    <div class="homenews-content">
-                        <span class="homenews-close">&times;</span>
-                        <div class="popup-content">
-                            <div class="popup-text">
-                                <h2>News Title 1</h2>
-                                <p>Some text in the Homenews Popup 3...</p>
-                            </div>
-                            <div class="popup-image">
-                                <img src="../assets/images/news1.png" alt="News Image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <img id="openPopup4" src="../assets/images/news1.png" alt="Click to open popup">
-                <div id="homenewsModal1" class="homenews">
-                    <!-- Popup content -->
-                    <div class="homenews-content">
-                        <span class="homenews-close">&times;</span>
-                        <div class="popup-content">
-                            <div class="popup-text">
-                                <h2>News Title 1</h2>
-                                <p>Some text in the Homenews Popup 4...</p>
-                            </div>
-                            <div class="popup-image">
-                                <img src="../assets/images/news1.png" alt="News Image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
-    <!-- Content of your index.html goes here -->
+      
     <div id="footer"></div>
     <script src="../js/fetchfooter.js"></script>
     <script src="../js/homenews.js"></script>
