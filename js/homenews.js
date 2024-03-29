@@ -2,10 +2,10 @@
 var homenewsModals = document.querySelectorAll(".homenews");
 
 // Get the images that open the homenews modals
-var openPopupImgs = document.querySelectorAll("[id^='openPopup']");
+var openPopupImgs = document.querySelectorAll("[data-popup]");
 
 // Get the buttons that open the homenews modals
-var openPopupButtons = document.querySelectorAll("[id^='openPopupButton']");
+var openPopupButtons = document.querySelectorAll("[data-popup-btn]");
 
 // Function to show modal by index
 function showModal(index) {

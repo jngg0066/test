@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="../css/homenews.css"> 
 </head>
 <body>
-    <div id="header"></div>
-    <script src="../js/fetchheader.js"></script>
+    <header id="header"></header>
+    <script src="../js/fetchheader.js" defer></script>
     
     <section class="sectionWel">
         <h1>Welcome!</h1> 
@@ -26,19 +26,20 @@
     <section class="section2">Something for info page</section>
     <section class="section3">Connectioning Suburban Portal </section>
     <section class="section4">
-        <h1>News article</h1>
+        <h1>News articles</h1>
         <div class="popup-container">
             <!-- First popup-item -->
             <div class="popup-item">
                 <!-- Image for the first popup -->
-                <img id="openPopup1" src="../assets/images/news1.png" alt="Click to open popup">
+                <img src="../assets/images/news1.png" alt="Click to open popup" data-popup="homenewsModal1">
                 <!-- News title for the first popup -->
                 <div class="news-title"> 
-                    <h2>Most Challenges faced by Australian Immigrants</h2> 
+                    <h2>Most Challenges faced by Australian Immigrants</h2>
                     <p> By Expatlawyers</p>
+                    <p> Format: Blog</p> 
                 </div>
                 <!-- Button to open the first popup -->
-                <button id="openPopupButton1" class="learn-more-btn">Learn More</button>
+                <button class="learn-more-btn" data-popup-btn="openPopupButton1">Learn More</button>
                 <!-- Modal for the first popup -->
                 <div id="homenewsModal1" class="homenews">
                     <!-- Popup content -->
@@ -54,7 +55,7 @@
                                 </p>
                                 <a href="https://expatlawyers.com.au/most-challenges-faced-by-australian-immigrants/" class="read-more-btn">Read More</a>
                             </div>
-                            <div class="popup-image">
+                            <div class="popup-inside-image">
                                 <img src="../assets/images/news1.png" alt="News Image">
                             </div>
                         </div>
@@ -65,14 +66,15 @@
             <!-- Second popup-item -->
             <div class="popup-item">
                 <!-- Image for the second popup -->
-                <img id="openPopup2" src="../assets/images/news2.png" alt="Click to open popup">
+                <img src="../assets/images/news2.png" alt="Click to open popup" data-popup="homenewsModal2">
                 <!-- News title for the second popup -->
                 <div class="news-title"> 
                     <h2>7 Common Hurdles Faced By New Australian Visa Holders, And How To Overcome Them</h2> 
                     <p> By AHWC</p>
+                    <p> Format: News Article</p> 
                 </div>
                 <!-- Button to open the second popup -->
-                <button id="openPopupButton2" class="learn-more-btn">Learn More</button>
+                <button class="learn-more-btn" data-popup-btn="openPopupButton2">Learn More</button>
                 <!-- Modal for the second popup -->
                 <div id="homenewsModal2" class="homenews">
                     <!-- Popup content -->
@@ -82,9 +84,9 @@
                             <div class="popup-text">
                                 <h2>7 Common Hurdles Faced By New Australian Visa Holders, And How To Overcome Them</h2>
                                 <p>Content for the second article goes here.</p>
-                                <a href="#" class="read-more-btn">Read More</a>
+                                <a href="https://ahwc.com.au/australian-immigration-news/7-common-hurdles-faced-new-australian-visa-holders/" class="read-more-btn">Read More</a>
                             </div>
-                            <div class="popup-image">
+                            <div class="popup-inside-image">
                                 <img src="../assets/images/news2.png" alt="News Image">
                             </div>
                         </div>
@@ -92,10 +94,72 @@
                 </div>
             </div>
 
+            <!-- Third popup-item -->
+            <div class="popup-item">
+                <!-- Image for the third popup -->
+                <img src="../assets/images/news3.png" alt="Click to open popup" data-popup="homenewsModal3">
+                <!-- News title for the third popup -->
+                <div class="news-title"> 
+                    <h2>Looking Back: Migrant children talk about learning English</h2>
+                    <p> By ABC Education</p>
+                    <p> Format: Youtube Video</p>  
+                </div>
+                <!-- Button to open the third popup -->
+                <button class="learn-more-btn" data-popup-btn="openPopupButton3">Learn More</button>
+                <!-- Modal for the third popup -->
+                <div id="homenewsModal3" class="homenews">
+                    <!-- Popup content -->
+                    <div class="homenews-content">
+                        <span class="homenews-close">&times;</span>
+                        <div class="popup-content">
+                            <div class="popup-text">
+                                <h2>Looking Back: Migrant children talk about learning English</h2>
+                                <p>Content for the second article goes here.</p>
+                                <a href="https://www.abc.net.au/education/learn-english/looking-back:-migrant-children-talk-about-learning-english/10365600" class="read-more-btn">Read More</a>
+                            </div>
+                            <div class="popup-inside-image">
+                                <img src="../assets/images/news3.png" alt="News Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- Fourth popup-item -->
+            <div class="popup-item">
+                <!-- Image for the fourth popup -->
+                <img src="../assets/images/news4.png" alt="Click to open popup" data-popup="homenewsModal4">
+                <!-- News title for the fourth popup -->
+                <div class="news-title"> 
+                    <h2>Study finds non-English speaking migrants adopt Australianisms to fit in</h2> 
+                    <p> By Ann Carter & Jessie Davies</p>
+                    <p> Format: News Article</p>  
+                </div>
+                <!-- Button to open the fourth popup -->
+                <button class="learn-more-btn" data-popup-btn="openPopupButton4">Learn More</button>
+                <!-- Modal for the fourth popup -->
+                <div id="homenewsModal4" class="homenews">
+                    <!-- Popup content -->
+                    <div class="homenews-content">
+                        <span class="homenews-close">&times;</span>
+                        <div class="popup-content">
+                            <div class="popup-text">
+                                <h2>Study finds non-English speaking migrants adopt Australianisms to fit in</h2>
+                                <p>Content for the second article goes here.</p>
+                                <a href="https://www.abc.net.au/news/2019-03-27/australianisms-adopted-by-non-english-speaking-migrants/10889872" class="read-more-btn">Read More</a>
+                            </div>
+                            <div class="popup-inside-image">
+                                <img src="../assets/images/news4.png" alt="News Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </section>
       
-    <div id="footer"></div>
-    <script src="../js/fetchfooter.js"></script>
-    <script src="../js/homenews.js"></script>
+    <footer id="footer"></footer>
+    <script src="../js/fetchfooter.js" defer></script>
+    <script src="../js/homenews.js" defer></script>
 </body>
 </html>

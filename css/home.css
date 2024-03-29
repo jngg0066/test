@@ -1,10 +1,8 @@
-/* Reset default margin and padding */
 * {
     margin: 0;
     padding: 0;
 }
 
-/* Apply smooth scrolling behavior to the whole document */
 html {
     scroll-behavior: smooth;
 }
@@ -105,26 +103,29 @@ html {
 .popup-item {
     flex: 0 0 calc(33.33% - 20px);  
     margin-bottom: 20px; 
-    text-align: center; /* Center align content */
+    text-align: center; 
+}
 
+.popup-item img {
+    cursor: pointer;  
 }
 
 .news-title h2 {
     font-family: "Raleway", sans-serif;
-    font-size: 12px; /* Adjust font size as needed */
+    font-size: 12px;  
     letter-spacing: 1px;
-    text-transform: none; /* Remove uppercase transformation */
-    text-align: center; /* Center the text */
+    text-transform: none;  
+    text-align: center;  
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .news-title p {
     font-family: "Raleway", sans-serif;
-    font-size: 12px; /* Adjust font size as needed */
+    font-size: 12px; 
     letter-spacing: 1px;
-    text-transform: none; /* Remove uppercase transformation */
-    text-align: center; /* Center the text */
+    text-transform: none;  
+    text-align: center;  
     margin-top: 10px;
     margin-bottom: 20px;
 }
