@@ -19,11 +19,15 @@
   width: 80%;
   max-width: 800px; /* Set maximum width if needed */
   display: flex; /* Use flexbox for layout */
+  position: relative;
+
 }
 
 .homenews-close {
   color: #aaaaaa;
-  float: right;
+  position: absolute;
+  top: 10px; /* Adjust top position as needed */
+  right: 10px; /* Adjust right position as needed */
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
@@ -41,20 +45,51 @@
 }
 
 .popup-image {
-  flex: 1; /* Take 50% of the width */
+  flex: 1; /* Take up all available space */
+  max-width: 50%; /* Limit the width to half of the popup */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.popup-text {
+  flex: 1; /* Take up the remaining space */
 }
 
 .popup-text h2 {
-  margin-top: 0; /* Remove default margin */
+  margin-top: 0px; /* Remove default margin */
+  font-size: 15px;
+  margin-right: 50px;
+  margin-left: 10px;
 }
 
 .popup-text p {
   font-family: "Raleway", sans-serif;
-  font-size: 15px;
+  text-transform: none; /* Remove uppercase transformation */
+  font-size: 13px;
   line-height: 1.5;  
   text-align: left;  
-  margin-top: 40px; 
+  margin-top: 20px; 
   margin-right: 50px;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  letter-spacing: 1px; /* Adjust the letter spacing as needed */
 }
 
+.popup-text .read-more-btn {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #000000; 
+  border-radius: 0px;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.popup-text .read-more-btn:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
 
