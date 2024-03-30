@@ -1,3 +1,45 @@
-#map {
-    height: 500px;
-}
+/* Custom styles for the cluster icon */
+.custom-marker-cluster {
+    background-color: #007bff; /* Blue background color */
+    border-radius: 50%; /* Round shape */
+    border: 2px solid #fff; /* White border */
+    text-align: center; /* Center text */
+    color: #fff; /* White text color */
+    font-size: 14px; /* Font size */
+    line-height: 30px; /* Line height */
+  }
+  
+  /* Custom styles for the cluster icon text */
+  .cluster-icon {
+    font-weight: bold; /* Bold text */
+    font-size: 16px; /* Larger font size */
+    color: #fff; /* White text color */
+  }
+  
+  /* Custom marker styles */
+  .marker {
+    position: absolute;
+    width: 20px; /* Marker width */
+    height: 20px; /* Marker height */
+    background-color: red; /* Marker color */
+    border-radius: 50%; /* Circular marker */
+  }
+  
+  /* Custom popup styles */
+  .popup {
+    position: absolute;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    z-index: 1000; /* Ensure popup is above markers */
+    display: none; /* Initially hidden */
+  }
+  
+  /* Show popup on marker hover */
+  .marker:hover + .popup {
+    display: block;
+  }
+  
