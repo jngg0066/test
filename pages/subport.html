@@ -21,19 +21,58 @@
             the surrounding schools and its details. 
         </p>
     </section>
-
     <section class="section1" id="section1">
- 
+        <div class="browser-container">
+            <div class="address-bar">
+                <div class="button minimize"></div>
+                <div class="button maximize"></div>
+                <div class="button close"></div>
+                <div class="tab" onclick="showContent('tab1')" data-tab="tab1">Tab 1</div>
+                <div class="tab" onclick="showContent('tab2')" data-tab="tab2">Tab 2</div>
+                <div class="tab" onclick="showContent('tab3')" data-tab="tab3">Tab 3</div>
+                <div class="tab" onclick="showContent('tab4')" data-tab="tab4">Tab 4</div>
+                <div class="tab" onclick="showContent('tab5')" data-tab="tab5">Tab 5</div>                            
+            </div>
+            
+            <div class="content" id="content">
+                <div id="tab1-content" class="tab-content active">
+                    <p>
+                        Content for Tab 1
+                    </p>
+                </div>
+                <div id="tab2-content" class="tab-content">
+                    <p>
+                        Content for Tab 2
+                    </p>
+                </div>
+                <div id="tab3-content" class="tab-content">
+                    <p>
+                        Content for Tab 3
+                    </p>
+                </div>
+                <div id="tab4-content" class="tab-content">
+                    <p>
+                        Content for Tab 4
+                    </p>
+                </div>
+                <div id="tab5-content" class="tab-content">
+                    <p>
+                        Content for Tab 5
+                    </p>
+                </div>
+            </div>
+            
+        </div>
     </section>
-
-
-
+    
+    
+    
+    <script src="../js/subport.js" defer></script> <!-- Add this line -->
     <button id="scrollupbtn" onclick="topFunction()">↑</button>
     <script src="../js/scrolltop.js" defer></script>
     
     <footer id="footer"></footer>
     <script src="../js/fetchfooter.js" defer></script>
     <script src="../js/homenews.js" defer></script>
-
 </body>
 </html>
