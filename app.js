@@ -5,4 +5,4 @@ app.listen(port, () => {
     console.log(`app running on port ${port}`)
 })
 
-app.use(express.static("home.html"))
+app.use(express.static("index.html"))
