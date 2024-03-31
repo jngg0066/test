@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }).addTo(map);
 
   // Fetch GeoJSON data for point features
-  fetch('point.geojson')
+  fetch('marker.geojson')
     .then(response => response.json())
     .then(data => {
       // Create an array to store markers
