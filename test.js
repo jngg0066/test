@@ -1,48 +1,63 @@
-// Initialize map
-var map = L.map('map').setView([48.8566, 2.3522], 13);
+document.addEventListener("DOMContentLoaded", function () {
+  // Create map
+  var map = L.map("map").setView([-37.88, 145.12], 13); // Centered on the GeoJSON data
 
-// Add OpenStreetMap tiles
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+  // Add OpenStreetMap tiles
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
 
-// Define custom cluster icon
-function createClusterCustomIcon(cluster) {
-  return L.divIcon({
-    html: '<span class="cluster-icon">' + cluster.getChildCount() + '</span>',
-    className: 'custom-marker-cluster',
-    iconSize: L.point(33, 33, true)
-  });
-}
+  // Fetch GeoJSON data for point features
+  fetch('point.geojson')
+    .then(response => response.json())
+    .then(data => {
+      // Create an array to store markers
+      var markerArray = [];
 
-// Define markers data
-var markers = [
-  {
-    geocode: [48.86, 2.3522],
-    popUp: 'Hello, I am pop up 1'
-  },
-  {
-    geocode: [48.85, 2.3522],
-    popUp: 'Hello, I am pop up 2'
-  },
-  {
-    geocode: [48.855, 2.34],
-    popUp: 'Hello, I am pop up 3'
-  }
-];
+      // Add markers to the array
+      data.features.forEach(function (feature) {
+        var coordinates = feature.geometry.coordinates.reverse(); // Reversed for Leaflet
+        var marker = L.marker(coordinates); // Create marker
+        marker.bindPopup(feature.properties.popupText); // Bind popup with feature properties
+        marker.on('click', function () { // Add click event listener to marker
+          marker.openPopup(); // Open popup when marker is clicked
+        });
+        markerArray.push(marker); // Add marker to the array
+      });
 
-// Add marker cluster group
-var markerCluster = L.markerClusterGroup({
-  chunkedLoading: true,
-  iconCreateFunction: createClusterCustomIcon
+      // Create a marker cluster group and add all markers to it
+      var markers = L.markerClusterGroup();
+      markers.addLayers(markerArray);
+
+      // Add marker cluster group to the map
+      map.addLayer(markers);
+    })
+    .catch(error => {
+      console.error('Error loading GeoJSON data:', error);
+    });
+
+  // Fetch GeoJSON data for boundary features
+  fetch('boundary.geojson')
+    .then(response => response.json())
+    .then(data => {
+      // Add GeoJSON polygons to map for boundary features (suburbs)
+      L.geoJSON(data, {
+        style: function (feature) {
+          return {
+            color: "#3388ff", // Border color
+            weight: 2, // Border width
+            fillOpacity: 0.1, // Fill opacity
+            fillColor: "#3388ff" // Fill color
+          };
+        },
+        onEachFeature: function (feature, layer) {
+          if (feature.properties && feature.properties.popupText) {
+            layer.bindPopup(feature.properties.popupText); // Bind popup with feature properties
+          }
+        }
+      }).addTo(map);
+    })
+    .catch(error => {
+      console.error('Error loading GeoJSON data:', error);
+    });
 });
-
-// Add markers to cluster group
-markers.forEach(function(marker) {
-  var markerElement = L.marker(marker.geocode);
-  markerElement.bindPopup(marker.popUp);
-  markerCluster.addLayer(markerElement);
-});
-
-// Add marker cluster group to map
-map.addLayer(markerCluster);

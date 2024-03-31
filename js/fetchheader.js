@@ -1,6 +1,6 @@
 // fetchHeader.js
 // Fetch header.html using JavaScript
-fetch('../assets/header.html')
+fetch('../assets/header-footer/header.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('header').innerHTML = data;

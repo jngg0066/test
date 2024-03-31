@@ -6,6 +6,9 @@
     <title>Web Title - Home</title>
     <link rel="stylesheet" href="../css/subport/subport.css">
     <link rel="stylesheet" href="../css/scrolltop.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css">
 </head>
 <body>
     <header id="header"></header>
@@ -27,47 +30,24 @@
                 <div class="button minimize"></div>
                 <div class="button maximize"></div>
                 <div class="button close"></div>
-                <div class="tab" onclick="showContent('tab1')" data-tab="tab1">Tab 1</div>
+                <div class="tab active" onclick="showContent('tab1')" data-tab="tab1">Tab 1</div>
                 <div class="tab" onclick="showContent('tab2')" data-tab="tab2">Tab 2</div>
                 <div class="tab" onclick="showContent('tab3')" data-tab="tab3">Tab 3</div>
                 <div class="tab" onclick="showContent('tab4')" data-tab="tab4">Tab 4</div>
                 <div class="tab" onclick="showContent('tab5')" data-tab="tab5">Tab 5</div>                            
             </div>
             
-            <div class="content" id="content">
-                <div id="tab1-content" class="tab-content active">
-                    <p>
-                        Content for Tab 1
-                    </p>
-                </div>
-                <div id="tab2-content" class="tab-content">
-                    <p>
-                        Content for Tab 2
-                    </p>
-                </div>
-                <div id="tab3-content" class="tab-content">
-                    <p>
-                        Content for Tab 3
-                    </p>
-                </div>
-                <div id="tab4-content" class="tab-content">
-                    <p>
-                        Content for Tab 4
-                    </p>
-                </div>
-                <div id="tab5-content" class="tab-content">
-                    <p>
-                        Content for Tab 5
-                    </p>
-                </div>
-            </div>
+            <div id="tab1-content" class="tab-content active">
+                <div id="map"></div>
+            </div>            
             
         </div>
     </section>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
     
-    
-    
-    <script src="../js/subport.js" defer></script> <!-- Add this line -->
+    <script src="../js/subport.js" defer></script>
     <button id="scrollupbtn" onclick="topFunction()">↑</button>
     <script src="../js/scrolltop.js" defer></script>
     

@@ -32,19 +32,10 @@ html {
     margin-left: 60px;
     margin-right: 60px;
 }
-  
-.section1 {
-    background: #9BC6DA;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 
 .section1 {
     background: #9BC6DA;
-    height: 600px;
+    height: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,11 +106,23 @@ html {
 .tab-content {
     display: none;
     height: 500px;
-    width: 300px;
+    width: 800px;
 
 }
 
 .tab-content.active {
     display: block;
+}
+  
+/* Add specific styling for the map container */
+#map {
+    height: 500px; /* Set the desired height for the map */
+    width: 100%; /* Ensure the map takes up the full width of its container */
+}
+
+/* Adjust the size of the Leaflet container */
+.leaflet-container {
+    height: 100%; /* Set height to 100% to fill its parent container */
+    width: 100%; /* Set width to 100% to fill its parent container */
 }
 
