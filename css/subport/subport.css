@@ -1,29 +1,29 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-html {
+  }
+  
+  html {
     scroll-behavior: smooth;
-}
-
-.sectionWel {
+  }
+  
+  .sectionWel {
     background: #F2EFF7;
     height: 400px;
     display: flex;
     flex-direction: column;  
     align-items: center;
     justify-content: center;
-}
-
-.sectionWel h1 {
+  }
+  
+  .sectionWel h1 {
     font-family: "Raleway", sans-serif;
     font-size: 32px;
     text-transform: uppercase;
     letter-spacing: 8px;
-}
-
-.sectionWel p {
+  }
+  
+  .sectionWel p {
     font-family: "Raleway", sans-serif;
     font-size: 15px;
     line-height: 1.5;  
@@ -31,98 +31,53 @@ html {
     margin: 40px; 
     margin-left: 60px;
     margin-right: 60px;
-}
+  }
+  
+  .section1 {
+    background: #f3e4d7;
+    height: 700px;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    height: 700px;
 
-.section1 {
-    background: #9BC6DA;
-    height: 800px;
+  }
+  
+  .map-bar {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-}
-
-.browser-container {
-    width: 80%;
-    max-width: 800px;
-    background: #fff;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.browser-frame {
-    position: relative;
-    height: 100%;
-}
-
-.button {
-    width: 10px;
-    height: 10px;
-    margin-right: 5px;
-    border-radius: 50%;
-}
-
-.minimize {
-    background-color: #FFD966;
-}
-
-.maximize {
-    background-color: #66BB6A;
-}
-
-.close {
-    background-color: #EF5350;
-}
-
-.address-bar {
-    height: 40px;
-    background: #f0f0f0;
-    border-bottom: 2px solid #ccc;
-    display: flex;
-    align-items: center;
-    padding: 0 10px;
-}
-
-.tab {
+    margin-bottom: 20px;
+  }
+  
+  .tab {
     cursor: pointer;
     padding: 10px 20px;
-    border-right: 1px solid #ccc;
-    background-color: #f0f0f0;
-}
-
-.tab.active {
-    background-color: #9b9797; /* Change this to the desired color */
-}
-
-.tab:last-child {
-    border-right: none;
-}
-
-.tab:hover {
-    background-color: #ddd;
-}
-
-.tab-content {
-    display: none;
-    height: 500px;
-    width: 800px;
-
-}
-
-.tab-content.active {
-    display: block;
-}
+    background-color: #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+  }
   
-/* Add specific styling for the map container */
-#map {
-    height: 500px; /* Set the desired height for the map */
-    width: 100%; /* Ensure the map takes up the full width of its container */
-}
-
-/* Adjust the size of the Leaflet container */
-.leaflet-container {
-    height: 100%; /* Set height to 100% to fill its parent container */
-    width: 100%; /* Set width to 100% to fill its parent container */
-}
-
+  .tab.active {
+    background-color: #999;
+  }
+  
+  .tab:hover {
+    background-color: #999;
+  }
+  
+  .map {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    font-family: sans-serif;
+    color: #333;
+    background-color: #fff;
+  }
+   
