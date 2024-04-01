@@ -1,43 +1,35 @@
-/* footer.css */
 
-/* Style for the footer container */
 footer {
-    background-color: #333; /* Background color */
-    color: #fff; /* Text color */
-    padding: 20px 0; /* Padding */
-    text-align: center; /* Center-align text */
+    background-color: #333;  
+    color: #fff;  
+    padding: 20px 0;  
+    text-align: center;  
 }
 
-/* Style for the footer content */
 .footer-content {
-    max-width: 960px; /* Maximum width */
-    margin: 0 auto; /* Center the content horizontally */
+    max-width: 960px; 
+    margin: 0 auto; 
 }
 
-/* Style for the paragraph inside the footer */
 .footer-content p {
-    margin: 0; /* Remove default margin */
+    margin: 0; 
 }
 
-/* Style for the footer links */
 .footer-links {
-    list-style-type: none; /* Remove list bullets */
-    padding: 0; /* Remove default padding */
+    list-style-type: none; 
+    padding: 0; 
 }
 
-/* Style for individual list items in the footer links */
 .footer-links li {
-    display: inline; /* Display horizontally */
-    margin-right: 10px; /* Add spacing between links */
+    display: inline; 
+    margin-right: 10px; 
 }
 
-/* Style for the links in the footer */
 .footer-links li a {
-    color: #fff; /* Link color */
-    text-decoration: none; /* Remove underline */
+    color: #fff;
+    text-decoration: none; 
 }
 
-/* Style for the hover effect on footer links */
 .footer-links li a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline; 
 }

@@ -1,7 +1,5 @@
-// Corrected JavaScript code in scrolltop.js
 
-let mybutton = document.getElementById("scrollupbtn"); // Updated to match the button ID in HTML
-
+let mybutton = document.getElementById("scrollupbtn");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {

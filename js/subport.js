@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
     var map = L.map("map").setView([-37.8136, 144.9631], 10);
-    var markers = L.markerClusterGroup(); // Create a marker cluster group
+    var markers = L.markerClusterGroup();  
   
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
   
     function clearMap() {
-      markers.clearLayers(); // Clear existing markers
+      markers.clearLayers();  
       map.eachLayer(function (layer) {
         if (layer instanceof L.GeoJSON) {
-          map.removeLayer(layer); // Remove existing boundary layers
+          map.removeLayer(layer);  
         }
       });
     }
@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function loadGeoJSON(markerURL, boundaryURL) {
       clearMap();
   
-      // Fetch marker GeoJSON data
       fetch(markerURL)
         .then(response => response.json())
         .then(data => {
@@ -34,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
           console.error('Error loading marker GeoJSON data:', error);
         });
   
-      // Fetch boundary GeoJSON data
       fetch(boundaryURL)
         .then(response => response.json())
         .then(data => {
@@ -65,8 +63,8 @@ document.addEventListener("DOMContentLoaded", function () {
       if (tab === 'tab1') {
         markerURL = '../assets/subportmap/marker.geojson';
         boundaryURL = '../assets/subportmap/boundary.geojson';
-        view = [-37.892, 145.15]; // Set view for tab 1
-        map.setView(view, 12); // Set view with specific zoom level
+        view = [-37.892, 145.15]; 
+        map.setView(view, 12); 
       } else if (tab === 'tab2') {
         markerURL = '../assets/subportmap/marker2.geojson';
         boundaryURL = '../assets/subportmap/boundary2.geojson';
@@ -75,15 +73,11 @@ document.addEventListener("DOMContentLoaded", function () {
       loadGeoJSON(markerURL, boundaryURL);
     }
   
-    // Add event listeners to the tabs
     var tabs = document.querySelectorAll('.tab');
     tabs.forEach(tab => {
       tab.addEventListener('click', function() {
-        // Remove 'active' class from all tabs
         tabs.forEach(t => t.classList.remove('active'));
-        // Add 'active' class to the clicked tab
         this.classList.add('active');
-        // Show content based on the clicked tab
         showContent(this.dataset.tab);
       });
     });

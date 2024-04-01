@@ -47,7 +47,7 @@ html {
 }
   
 .section2 {
-    background: #A1D0B8;
+    background: #a6ccb8;
     height:600px;
     display: flex;
     align-items: center;
@@ -59,7 +59,7 @@ html {
 }
   
 .section3 {
-    background: #9BC6DA;
+    background: #f3e4d7;
     height:600px;
     display: flex;
     align-items: center;
@@ -94,8 +94,8 @@ html {
 
 .popup-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    grid-gap: 20px; /* Adjust the gap between items */
+    grid-template-columns: repeat(2, 1fr);  
+    grid-gap: 20px;  
     width: 80%;  
     margin: 0 auto;
 }
