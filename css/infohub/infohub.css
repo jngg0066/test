@@ -14,7 +14,6 @@ html {
     flex-direction: column;  
     align-items: center;
     justify-content: center;
-
 }
 
 .sectionWel h1 {
@@ -47,7 +46,7 @@ html {
 }
   
 .section2 {
-    background: #ffffff;
+    background: #a1d0d0;
     height:600px;
     display: flex;
     align-items: center;
@@ -58,3 +57,80 @@ html {
     letter-spacing: 8px;
 }
 
+.section3 {
+    background: #a1bdd0;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    font-family: "Raleway", sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    flex-direction: column; /* Change flex-direction to column */
+}
+
+.section3 h3 {
+    font-family: "Raleway", sans-serif;
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    margin-top: 60px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.collapsible-container {
+    width: 80%;  
+    margin: auto; 
+}
+
+.collapsible,
+.collapsible-content {
+    box-sizing: border-box;  
+}
+
+.collapsible {
+    background-color: #0000005e;
+    color: #ffffff;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 18px;
+    height: 80px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Add margin-bottom */
+    transition: margin-bottom 0.3s ease; /* Add transition for smooth animation */
+}
+
+.collapsible.active {
+    margin-bottom: 0; /* Remove margin-bottom when active */
+}
+
+.collapsible-content {
+    background-color: #f1f1f18f;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: none;
+    overflow: hidden;
+    width: 100%;
+    display: none;
+    height: 100px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.active,
+.collapsible:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.collapsible.active + .collapsible-content {
+    display: block;
+}
