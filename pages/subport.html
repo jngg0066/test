@@ -1,65 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Title - Home</title>
-    <link rel="stylesheet" href="../css/subport/subport.css" />
-    <link rel="stylesheet" href="../css/scrolltop.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-</head>
-<body>
-  <header id="header"></header>
-  <script src="../js/fetchheader.js" defer></script>
-  <section class="sectionWel">
-    <h1>What is Suburban Portal?</h1> 
-    <p>
-        A Suburban Portal is an online platform or tool designed 
-        to provide information on suburban areas related to the selected country 
-        among the top five migrating into Victoria, Australia. 
-        It serves as a centralized hub where parents can view 
-        the surrounding schools and its details. 
-    </p>
-  </section>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Web Title - Home</title>
+      <link rel="stylesheet" href="../css/subport/subport.css" />
+      <link rel="stylesheet" href="../css/scrolltop.css">
+      <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+    <script src="../js/fetchheader.js" defer></script>
+    <section class="sectionWel">
+      <h1>What is Suburban Portal?</h1> 
+      <p>
+          A Suburban Portal is an online platform or tool designed 
+          to provide information on suburban areas related to the selected country 
+          among the top five migrating into Victoria, Australia. 
+          It serves as a centralized hub where parents can view 
+          the surrounding schools and its details. 
+      </p>
+    </section>
 
-  <section class="section1" id="section1">
-    <div class="container">
+    <section class="section1" id="section1">
+      <div class="container">
         <div class="map-bar">
-          <div class="tab" onclick="showContent('tab1')" data-tab="tab1">
-            Chinese
+          <div class="tab-container">
+            <div class="tab" onclick="showContent('tab1')" data-tab="tab1">Chinese</div>
+            <div class="tab" onclick="showContent('tab2')" data-tab="tab2">Tab 2</div>
           </div>
-          <div class="tab" onclick="showContent('tab2')" data-tab="tab2">Tab 2</div>                                       
         </div>
-        <div class="dropdown">
-          <span class="select-suburb">Select a suburb</span>
-          <select id="locationsDropdown">
-            <option value="" disabled selected></option>
-            <!-- Options for tab 1 -->
-            <optgroup label="Suburb Options" id="tab1Options">
-              <option value="mountWaverley">Mount Waverley</option>
-              <option value="glenWaverley">Glen Waverley</option>
-              <!-- Add other Chinese options here -->
-            </optgroup>
-            <!-- Options for tab 2 -->
-            <optgroup label="Suburb Options" id="tab2Options" style="display: none;">
-              <option value="option1">Option 1</option>
-              <!-- Add other options for tab 2 here -->
-            </optgroup>
+        <div class="dropdown" id="dropdownTab1">
+          <select id="dropdownMenuTab1">
+            <option value="">Select a Suburb</option> 
+            <option value="">Show All</option> 
+            <option value="Glen Waverley">Glen Waverley</option>
+            <option value="Mount Waverley">Mount Waverley</option>
+            <option value="option3">Option 3 for Tab 1</option>
           </select>
-        </div>        
+        </div>
+        <div class="dropdown" id="dropdownTab2">
+          <select id="dropdownMenuTab2">
+            <option value="">Select a Suburb</option> 
+            <option value="">Show All</option> 
+            <option value="X">X</option>
+            <option value="option2">Option 2 for Tab 2</option>
+            <option value="option3">Option 3 for Tab 2</option>
+          </select>
+        </div>
         <div class="map" id="map"></div>
       </div>
-  </section>
+    </section>
 
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
-  <script src="../js/subport.js" defer></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <script src="../js/subport.js" defer></script>
 
-  <button id="scrollupbtn" onclick="topFunction()">↑</button>
-  <script src="../js/scrolltop.js" defer></script>
-  
-  <footer id="footer"></footer>
-  <script src="../js/fetchfooter.js" defer></script>
-  <script src="../js/homenews.js" defer></script>
-</body>
-</html>
+    <button id="scrollupbtn" onclick="topFunction()">↑</button>
+    <script src="../js/scrolltop.js" defer></script>
+    
+    <footer id="footer"></footer>
+    <script src="../js/fetchfooter.js" defer></script>
+    <script src="../js/homenews.js" defer></script>
+  </body>
+  </html>

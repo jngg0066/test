@@ -1,0 +1,19 @@
+[
+    {
+      "Education_Sector": "Government",
+      "School_Name": "Mount Waverley Primary School",
+      "Suburb": "Mount Waverley",
+      "LGA_Name": "Monash (C)",
+      "Longitude": 145.12411,
+      "Latitude": -37.88127
+    },
+    {
+        "Education_Sector": "Catholic",
+        "School_Name": "St Leonard's School",
+        "Suburb": "Glen Waverley",
+        "LGA_Name": "Monash (C)",
+        "Longitude": 145.16389,
+        "Latitude": -37.8868
+      }
+]
+  

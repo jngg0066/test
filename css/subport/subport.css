@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -55,6 +50,12 @@ html {
   margin-bottom: 20px;
 }
 
+.tab-container {
+  display: flex; /* Change from default block layout to flex */
+  justify-content: center; /* Center the tabs horizontally */
+  margin-bottom: 20px;
+}
+
 .tab {
   cursor: pointer;
   padding: 10px 20px;
@@ -72,25 +73,17 @@ html {
   background-color: #999;
 }
 
-/* Styling for dropdown select */
-.tab select {
-  padding: 8px 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: white;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-/* Styling for dropdown select */
-.select-suburb {
-  font-size: 14px;
-  margin-bottom: 5px;
-  display: inline-block; /* Change display to inline-block */
-}
-
 .dropdown {
-  display: inline-block; /* Change display to inline-block */
-  vertical-align: middle; /* Align vertically with the text */
-  margin-left: 10px; /* Adjust margin as needed */
+  display: none; /* Initially hide dropdowns */
+  margin-top: 10px; /* Adjust margin as needed */
+  align-items: center; /* Center the dropdown horizontally */
+  margin-bottom: 20px;
+}
+
+.dropdown select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 16px;
 }
