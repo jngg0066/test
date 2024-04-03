@@ -163,7 +163,7 @@ html {
 }
 
 .collapsible {
-    background-color: #0000005e;
+    background-color: #667783;
     color: #ffffff;
     font-family: "Raleway", sans-serif;
     text-transform: uppercase;
@@ -185,16 +185,17 @@ html {
 }
 
 .collapsible-content {
-    background-color: #f1f1f18f;
+    display: none; /* Hide collapsible-content by default */
+    background-color: #b1c4d1;
     font-size: 12px;
     letter-spacing: 3px;
     text-transform: none;
     width: 100%;
-    overflow: hidden; /* Add overflow property */
-    height: auto; /* Set height to auto */
+    overflow: hidden;
     padding: 20px;
     margin-bottom: 20px;
 }
+
 
 .collapsible.active + .collapsible-content {
     display: block;
@@ -202,6 +203,28 @@ html {
 
 .active,
 .collapsible:hover {
-    background-color: #ffffff;
+    background-color: rgb(121, 183, 228);
     color: #000000;
+}
+
+.collapsible-content p:first-child {
+    font-family: "Raleway", sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #353434;  
+}
+
+.collapsible-content p:not(:first-child) {
+    font-family: "Raleway", sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #376037; 
+}
+
+.collapsible-content p {
+    text-align: justify;
+}
+
+.collapsible-content p {
+    margin-bottom: 20px; 
 }
