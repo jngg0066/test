@@ -4,29 +4,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Event listener for tab selection
   document.querySelectorAll('.tab').forEach(tab => {
-      tab.addEventListener('click', function () {
-          var tabId = this.dataset.tab;
-          if (tabId === 'tab1') {
-              // Reset dropdown selection for tab 1
-              resetDropdown('dropdownMenuTab1');
-              // Fetch schools.json for tab1
-              fetchSchoolsData("../assets/subportmap/schools.json", getSelectedSuburb('dropdownMenuTab1'));
-              showDropdown('dropdownTab1');
-          } else if (tabId === 'tab2') {
-              // Reset dropdown selection for tab 2
-              resetDropdown('dropdownMenuTab2');
-              // Fetch schools2.json for tab2
-              fetchSchoolsData("../assets/subportmap/schools2.json", getSelectedSuburb('dropdownMenuTab2'));
-              showDropdown('dropdownTab2');
-          }
-          // Remove active class from all tabs
-          document.querySelectorAll('.tab').forEach(tab => {
-              tab.classList.remove('active');
-          });
-          // Add active class to the clicked tab
-          this.classList.add('active');
-      });
-  });
+    tab.addEventListener('click', function () {
+        var tabId = this.dataset.tab;
+        if (tabId === 'tab1') {
+            // Reset dropdown selection for tab 1
+            resetDropdown('dropdownMenuTab1');
+            // Fetch schools.json for tab1
+            fetchSchoolsData("../assets/subportmap/schools.json", getSelectedSuburb('dropdownMenuTab1'));
+            showDropdown('dropdownTab1');
+            // Show Monash button for tab1
+            document.getElementById('monashButton').style.display = 'block';
+        } else if (tabId === 'tab2') {
+            // Reset dropdown selection for tab 2
+            resetDropdown('dropdownMenuTab2');
+            // Fetch schools2.json for tab2
+            fetchSchoolsData("../assets/subportmap/schools2.json", getSelectedSuburb('dropdownMenuTab2'));
+            showDropdown('dropdownTab2');
+            // Hide Monash button for tab2
+            document.getElementById('monashButton').style.display = 'none';
+        }
+        // Remove active class from all tabs
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.classList.remove('active');
+        });
+        // Add active class to the clicked tab
+        this.classList.add('active');
+    });
+});
 
   // Event listener for dropdown change
   document.querySelectorAll('.dropdown select').forEach(dropdown => {
@@ -46,8 +50,22 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+function showContent(tabId) {
+    // Hide all content divs
+    document.querySelectorAll('.text-container > div').forEach(div => {
+        div.style.display = 'none';
+    });
+
+    // Show the content div corresponding to the selected tab
+    document.getElementById(tabId + 'Content').style.display = 'block';
+
+    // Add active class to text-container
+    document.querySelector('.text-container').classList.add('active');
+}
+
 function showDropdown(dropdownId) {
   // Hide all dropdowns
+
   document.querySelectorAll('.dropdown').forEach(dropdown => {
       dropdown.style.display = 'none';
   });
