@@ -7,12 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
         tab.addEventListener('click', function () {
             var tabId = this.dataset.tab;
             // Reset dropdown selection based on the clicked tab
-            var dropdownId = tabId === 'tab1' ? 'dropdownMenuTab1' : 'dropdownMenuTab2';
+            var dropdownId = `dropdownMenu${tabId.charAt(0).toUpperCase() + tabId.slice(1)}`;
             resetDropdown(dropdownId);
-            fetchAllSchoolsData();
+            fetchAllSchoolsData(tabId);
 
             // Show the corresponding dropdown
-            showDropdown(tabId === 'tab1' ? 'dropdownTab1' : 'dropdownTab2');
+            showDropdown(tabId.replace('tab', 'dropdownTab'));
 
             // Toggle active class on tabs
             document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
@@ -21,10 +21,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Event listener for dropdown change
-    document.querySelectorAll('.dropdown select').forEach(dropdown => {
-        dropdown.addEventListener('change', function () {
-            fetchSchoolsData(this.value);
-        });
+    document.getElementById('dropdownMenuTab1').addEventListener('change', function () {
+        var selectedSuburb = this.value;
+        fetchSchoolsData(selectedSuburb, 'tab1');
+    });
+
+    document.getElementById('dropdownMenuTab2').addEventListener('change', function () {
+        var selectedSuburb = this.value;
+        fetchSchoolsData(selectedSuburb, 'tab2');
+    });
+
+    document.getElementById('dropdownMenuTab3').addEventListener('change', function () {
+        var selectedSuburb = this.value;
+        fetchSchoolsData(selectedSuburb, 'tab3');
+    });
+
+    document.getElementById('dropdownMenuTab4').addEventListener('change', function () {
+        var selectedSuburb = this.value;
+        fetchSchoolsData(selectedSuburb, 'tab4');
     });
 });
 
@@ -35,7 +49,7 @@ function showContent(tabId) {
     });
 
     // Show the content div corresponding to the selected tab
-    document.getElementById(tabId + 'Content').style.display = 'block';
+    document.getElementById(`${tabId}Content`).style.display = 'block';
 
     // Add active class to text-container
     document.querySelector('.text-container').classList.add('active');
@@ -53,17 +67,36 @@ function resetDropdown(dropdownId) {
     document.getElementById(dropdownId).selectedIndex = 0;
 }
 
-function getSelectedSuburb(dropdownId) {
-    // Get the selected suburb from the dropdown
-    return document.getElementById(dropdownId).value;
-}
-
-function fetchAllSchoolsData() {
+function fetchAllSchoolsData(tabId) {
     // Clear previous markers from the map
     clearMarkers();
 
-    // Fetch schools data from the API
-    fetch('https://1qktndqm8l.execute-api.ap-southeast-2.amazonaws.com/prod2')
+    let apiUrl;
+    // Determine API endpoint based on the tab selected
+    switch(tabId) {
+        case 'tab1':
+            apiUrl = 'https://1qktndqm8l.execute-api.ap-southeast-2.amazonaws.com/prod2';
+            break;
+        case 'tab2':
+            apiUrl = 'https://kbfoclo7dc.execute-api.ap-southeast-2.amazonaws.com/prod3';
+            break;
+        case 'tab3':
+            apiUrl = 'https://uwvl29qlxg.execute-api.ap-southeast-2.amazonaws.com/prod5';
+            break;
+        case 'tab4':
+            apiUrl = 'https://c3nn2v55vb.execute-api.ap-southeast-2.amazonaws.com/prod5';
+            break;
+        default:
+            apiUrl = '';
+    }
+
+    if (apiUrl === '') {
+        console.error('Invalid API URL');
+        return;
+    }
+
+    // Fetch schools data from the determined API endpoint
+    fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
             const schools = JSON.parse(data.body).map(school => ({
@@ -81,18 +114,42 @@ function fetchAllSchoolsData() {
         .catch(error => console.error('Error fetching data:', error));
 }
 
-function fetchSchoolsData(selectedSuburb) {
-    if (!selectedSuburb) {
-        // If no suburb is selected, fetch all schools data
-        fetchAllSchoolsData();
+function fetchSchoolsData(selectedSuburb, tabId) {
+    if (!selectedSuburb || selectedSuburb === 'Show All') {
+        // If no suburb is selected or 'Show All' is selected, fetch all schools data
+        fetchAllSchoolsData(tabId);
         return;
     }
 
     // Clear previous markers from the map
     clearMarkers();
 
-    // Fetch schools data from the API
-    fetch('https://1qktndqm8l.execute-api.ap-southeast-2.amazonaws.com/prod2')
+    let apiUrl;
+    // Determine API endpoint based on the tab selected
+    switch(tabId) {
+        case 'tab1':
+            apiUrl = 'https://1qktndqm8l.execute-api.ap-southeast-2.amazonaws.com/prod2';
+            break;
+        case 'tab2':
+            apiUrl = 'https://kbfoclo7dc.execute-api.ap-southeast-2.amazonaws.com/prod3';
+            break;
+        case 'tab3':
+            apiUrl = 'https://uwvl29qlxg.execute-api.ap-southeast-2.amazonaws.com/prod5';
+            break;
+        case 'tab4':
+            apiUrl = 'https://c3nn2v55vb.execute-api.ap-southeast-2.amazonaws.com/prod5';
+            break;
+        default:
+            apiUrl = '';
+    }
+
+    if (apiUrl === '') {
+        console.error('Invalid API URL');
+        return;
+    }
+
+    // Fetch schools data from the determined API endpoint
+    fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
             const schools = JSON.parse(data.body).map(school => ({
@@ -112,6 +169,7 @@ function fetchSchoolsData(selectedSuburb) {
         })
         .catch(error => console.error('Error fetching data:', error));
 }
+
 
 var map; // Declare map variable globally
 var markers = []; // Array to store markers
