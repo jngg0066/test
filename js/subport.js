@@ -7,12 +7,19 @@ document.addEventListener("DOMContentLoaded", function () {
         tab.addEventListener('click', function () {
             var tabId = this.dataset.tab;
             // Reset dropdown selection based on the clicked tab
-            var dropdownId = tabId === 'tab1' ? 'dropdownMenuTab1' : 'dropdownMenuTab2';
+            var dropdownId = 
+                tabId === 'tab1' ? 'dropdownTab1' :
+                tabId === 'tab2' ? 'dropdownTab2' :
+                tabId === 'tab3' ? 'dropdownTab3' : 
+                tabId === 'tab4' ? 'dropdownTab4' : ''; // Fixed syntax error
             resetDropdown(dropdownId);
-            fetchAllSchoolsData();
+            fetchAllSchoolsData(tabId);
 
             // Show the corresponding dropdown
-            showDropdown(tabId === 'tab1' ? 'dropdownTab1' : 'dropdownTab2');
+            showDropdown(tabId === 'tab1' ? 'dropdownTab1' :
+                        tabId === 'tab2' ? 'dropdownTab2' :
+                        tabId === 'tab3' ? 'dropdownTab3' :
+                        'dropdownTab4');
 
             // Toggle active class on tabs
             document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
@@ -23,10 +30,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Event listener for dropdown change
     document.querySelectorAll('.dropdown select').forEach(dropdown => {
         dropdown.addEventListener('change', function () {
-            fetchSchoolsData(this.value);
+            var tabId = this.parentElement.parentElement.dataset.tab;
+            fetchSchoolsData(this.value, tabId);
         });
     });
 });
+
 
 function showContent(tabId) {
     // Hide all content divs
@@ -58,12 +67,36 @@ function getSelectedSuburb(dropdownId) {
     return document.getElementById(dropdownId).value;
 }
 
-function fetchAllSchoolsData() {
+function fetchAllSchoolsData(tabId) {
     // Clear previous markers from the map
     clearMarkers();
 
-    // Fetch schools data from the API
-    fetch('https://1qktndqm8l.execute-api.ap-southeast-2.amazonaws.com/prod2')
+    let apiUrl;
+    // Determine API endpoint based on the tab selected
+    switch(tabId) {
+        case 'tab1':
+            apiUrl = 'https://1qktndqm8l.execute-api.ap-southeast-2.amazonaws.com/prod2';
+            break;
+        case 'tab2':
+            apiUrl = 'https://1qktndqm8l.execute-api.ap-southeast-2.amazonaws.com/prod3';
+            break;
+        case 'tab3':
+            apiUrl = 'https://1qktndqm8l.execute-api.ap-southeast-2.amazonaws.com/prod4';
+            break;
+        case 'tab4':
+            apiUrl = 'https://1qktndqm8l.execute-api.ap-southeast-2.amazonaws.com/prod5';
+            break;
+        default:
+            apiUrl = '';
+    }
+
+    if (apiUrl === '') {
+        console.error('Invalid API URL');
+        return;
+    }
+
+    // Fetch schools data from the determined API endpoint
+    fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
             const schools = JSON.parse(data.body).map(school => ({
@@ -81,18 +114,43 @@ function fetchAllSchoolsData() {
         .catch(error => console.error('Error fetching data:', error));
 }
 
-function fetchSchoolsData(selectedSuburb) {
+
+function fetchSchoolsData(selectedSuburb, tabId) {
     if (!selectedSuburb) {
         // If no suburb is selected, fetch all schools data
-        fetchAllSchoolsData();
+        fetchAllSchoolsData(tabId);
         return;
     }
 
     // Clear previous markers from the map
     clearMarkers();
 
-    // Fetch schools data from the API
-    fetch('https://1qktndqm8l.execute-api.ap-southeast-2.amazonaws.com/prod2')
+    let apiUrl;
+    // Determine API endpoint based on the tab selected
+    switch(tabId) {
+        case 'tab1':
+            apiUrl = 'https://1qktndqm8l.execute-api.ap-southeast-2.amazonaws.com/prod2';
+            break;
+        case 'tab2':
+            apiUrl = 'https://1qktndqm8l.execute-api.ap-southeast-2.amazonaws.com/prod3';
+            break;
+        case 'tab3':
+            apiUrl = 'https://1qktndqm8l.execute-api.ap-southeast-2.amazonaws.com/prod4';
+            break;
+        case 'tab4':
+            apiUrl = 'https://1qktndqm8l.execute-api.ap-southeast-2.amazonaws.com/prod5';
+            break;
+        default:
+            apiUrl = '';
+    }
+
+    if (apiUrl === '') {
+        console.error('Invalid API URL');
+        return;
+    }
+
+    // Fetch schools data from the determined API endpoint
+    fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
             const schools = JSON.parse(data.body).map(school => ({
