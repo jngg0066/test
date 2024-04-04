@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 tabId === 'tab3' ? 'dropdownTab3' : 
                 tabId === 'tab4' ? 'dropdownTab4' : ''; // Fixed syntax error
             resetDropdown(dropdownId);
-            fetchAllSchoolsData(tabId);
+            fetchAllSchoolsData();
 
             // Show the corresponding dropdown
             showDropdown(tabId === 'tab1' ? 'dropdownTab1' :
@@ -30,12 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Event listener for dropdown change
     document.querySelectorAll('.dropdown select').forEach(dropdown => {
         dropdown.addEventListener('change', function () {
-            var tabId = this.parentElement.parentElement.dataset.tab;
-            fetchSchoolsData(this.value, tabId);
+            fetchSchoolsData(this.value);
         });
     });
 });
-
 
 function showContent(tabId) {
     // Hide all content divs
