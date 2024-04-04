@@ -28,6 +28,8 @@
         <div class="tab-container">
           <div class="tab" onclick="showContent('tab1')" data-tab="tab1">Chinese</div>
           <div class="tab" onclick="showContent('tab2')" data-tab="tab2">Tab 2</div>
+          <div class="tab" onclick="showContent('tab2')" data-tab="tab2">Tab 3</div>
+          <div class="tab" onclick="showContent('tab2')" data-tab="tab2">Tab 4</div>
         </div>
       </div>
       <div class="text-container" id="textContainer">
@@ -36,6 +38,12 @@
         </div>
         <div id="tab2Content" style="display: none;">
             <p>Content for Tab 2</p>
+        </div>
+        <div id="tab3Content" style="display: none;">
+          <p>Content for Tab 3</p>
+        </div>
+        <div id="tab4Content" style="display: none;">
+          <p>Content for Tab 4</p>
         </div>
       </div>
       <div class="dropdown" id="dropdownTab1">
@@ -59,8 +67,26 @@
           <option value="">Select a Suburb</option> 
           <option value="">Show All</option> 
           <option value="X">X</option>
-          <option value="option2">X</option>
-          <option value="option3">X</option>
+          <option value="X">X</option>
+          <option value="X">X</option>
+        </select>
+      </div>
+      <div class="dropdown" id="dropdownTab3">
+        <select id="dropdownMenuTab3">
+          <option value="">Select a Suburb</option> 
+          <option value="">Show All</option> 
+          <option value="X">X</option>
+          <option value="X">X</option>
+          <option value="X">X</option>
+        </select>
+      </div>
+      <div class="dropdown" id="dropdownTab4">
+        <select id="dropdownMenuTab5">
+          <option value="">Select a Suburb</option> 
+          <option value="">Show All</option> 
+          <option value="X">X</option>
+          <option value="X">X</option>
+          <option value="X">X</option>
         </select>
       </div>
       <div class="map" id="map"></div>
