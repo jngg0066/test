@@ -14,7 +14,6 @@ html {
   flex-direction: column;  
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
 }
 
 .logo-container img {
@@ -43,8 +42,7 @@ html {
 }
 
 .section1 {
-  background: #ffffff;
-  height:600px;
+  height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,34 +53,30 @@ html {
 }
 
 .slogan-section {
-    position: relative;
-    text-align: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 800px; /* Make the section full viewport height, or adjust as needed */
-    display: flex;
-    justify-content: center;
-    align-items: center; /* This will center the text horizontally and vertically */
-  }
+  position: relative;
+  text-align: center;
+  width: 100%; /* Ensure the content occupies the full width */
+}
 
-  .slogan-text {
-    font-size: 70px;
-    color: #5bc3ff;
-    opacity: 0.7; /* Adjust the opacity to your liking */
-    animation: pop-up 2s ease-out infinite;
-  }
+.slogan-text {
+  font-size: 70px;
+  color: #ffff75f0;
+  opacity: 0.7;
+  animation: pop-up 2s ease-out infinite;
+}
+
 /* Keyframes for the pop-up animation */
 @keyframes pop-up {
     0%, 100% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: scale(1);
         opacity: 1;
     }
     50% {
-        transform: translate(-50%, -50%) scale(1.1); /* Scale up slightly for popping effect */
+        transform: scale(1.1); /* Scale up slightly for popping effect */
         opacity: 1;
     }
 }
+
 
 
 .section2 {
