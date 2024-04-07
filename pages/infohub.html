@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Title - Home</title>
+    <title>The Learning Compass - Info Hub</title>
     <link rel="stylesheet" href="../css/infohub/infohub.css">
     <link rel="stylesheet" href="../css/general/scrolltop.css">
     <script src="https://code.highcharts.com/highcharts.js"></script>
 </head>
 <body>
     <header id="header"></header>
-    <script src="../js/fetchheader.js" defer></script>
+    <script src="../js/general/fetchheader.js" defer></script>
     
     <section class="sectionWel">
         <h1>What is Info Hub?</h1> 
@@ -29,7 +29,7 @@
 
         <p>
             Additionally, it addresses the challenges faced by migrants, such as language barriers, 
-            cultural discrimination, educational differences, and social isolation, X, and X to provide a well-rounded 
+            cultural discrimination, educational differences, and social isolation, and mental health to provide a well-rounded 
             perspective on the migration landscape in Australia.
         </p>
     </section>
@@ -40,7 +40,7 @@
         </div>
         <div class="containerWrapper">
             <div class="container1" id="container1">
-                <script src="../js/line_graph.js"></script>
+                <script src="../js/infohub/line_graph.js"></script>
             </div>
             <div class="graphtext">
                 <h1>Insights into Australia's Migration Trends (2022-23)</h1>
@@ -88,7 +88,7 @@
 
             </div>
             <div class="container2" id="container2">
-                <script src="../js/bar_graph.js"></script>
+                <script src="../js/infohub/bar_graph.js"></script>
             </div>
         </div>
     </section>
@@ -97,8 +97,9 @@
     <section class="section3">
         <h3>Challenges</h3>
         <div class="collapsible-container">
-            <button type="button" class="collapsible">Proficiency in English / Language barrier </button>
-            <div class="collapsible-content">
+            <button type="button" class="collapsible"> Proficiency in English / Language barrier <span class="arrow">&#9660;</span>
+            </button>
+                        <div class="collapsible-content">
                 <p> Children of new Australian migrants often encounter language barriers that affect their social and academic interactions. 
                     Strategies such as utilizing translation apps, watching local media with subtitles, and actively noting new vocabulary 
                     can help them overcome these challenges. Moreover, while initially intimidating, grasping Australian slang becomes more 
@@ -110,7 +111,7 @@
                 </p>
             </div>
         
-            <button type="button" class="collapsible">Culture discrimination / Xenophobia</button>
+            <button type="button" class="collapsible">Culture discrimination / Xenophobia <span class="arrow">&#9660;</button>
             <div class="collapsible-content"> 
                 <p>Culture shock refers to the emotional response triggered by encountering unfamiliar customs and behaviours in a new country. 
                     Australian culture, characterized by its casual and individualistic nature, may contrast with the collectivistic norms prevalent 
@@ -124,7 +125,7 @@
                     Language barriers, social isolation, especially for older migrants, and rising discrimination threaten their progress.
                 </p>
             </div>
-            <button type="button" class="collapsible">Education differences</button>
+            <button type="button" class="collapsible">Education differences <span class="arrow">&#9660;</button>
             <div class="collapsible-content">
                 <p>For parents with children, it's crucial to grasp the Australian education system to secure their optimal learning journey. Learn about 
                     various school levels, curriculum, and enrolment procedures. Communicate with local schools, discussing your child's requirements to 
@@ -136,7 +137,7 @@
                 </p>
             </div>
 
-            <button type="button" class="collapsible">Social Isolation </button>
+            <button type="button" class="collapsible">Social Isolation <span class="arrow">&#9660;</button>
             <div class="collapsible-content">
                 <p>New migrant children in Australia may find it challenging to make friends. Building relationships requires patience and persistence, with 
                     shared hobbies aiding in socialization. Effective communication and maintaining a positive outlook about the move are essential for 
@@ -149,7 +150,7 @@
                 </p>
             </div>
 
-            <button type="button" class="collapsible">Mental health</button>
+            <button type="button" class="collapsible">Mental health <span class="arrow">&#9660;</button>
             <div class="collapsible-content">
                 <p>Language barriers, cultural discrimination, and social isolation can have adverse effects on the mental health of migrant children. Findings
                     from Building a New Life in Australia, a longitudinal study of resettled humanitarian migrants and their families in Australia, presented a 
@@ -164,10 +165,10 @@
     </section>
     
     <button id="scrollupbtn" onclick="topFunction()">↑</button>
-    <script src="../js/scrolltop.js" defer></script>
+    <script src="../js/general/scrolltop.js" defer></script>
 
     <footer id="footer"></footer>
-    <script src="../js/fetchfooter.js" defer></script>
-    <script src="../js/infohubcollapse.js" defer></script> 
+    <script src="../js/general/fetchfooter.js" defer></script>
+    <script src="../js/infohub/infohubcollapse.js" defer></script> 
 </body>
 </html>

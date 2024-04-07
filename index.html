@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MigrantEduSupport - Home</title>
+    <title>The Learning Compass - Home</title>
     <link rel="stylesheet" href="../css/home/home.css">
     <link rel="stylesheet" href="../css/home/homepopup.css"> 
     <link rel="stylesheet" href="../css/general/scrolltop.css">
@@ -11,12 +11,15 @@
 </head>
 <body>
     <header id="header"></header>
-    <script src="../js/fetchheader.js" defer></script>
+    <script src="../js/general/fetchheader.js" defer></script>
     
     <section class="sectionWel">
         <h1>Welcome!</h1> 
+        <div class="sectionWel-img-container">
+            <img src="..\assets\images\logo2.png" alt="Web Logo">
+        </div>        
         <p>
-            Welcome to MigrantEduSupport, your dedicated platform for supporting migrant families in Victoria, Australia. We understand the journey of resettlement is filled with challenges, from navigating a new education system to understanding cultural nuances. Our mission is to empower you, the parents, with the tools and knowledge needed to ensure a smooth transition for your family.
+            Welcome to The Learning Compass, your dedicated platform for supporting migrant families in Victoria, Australia. We understand the journey of resettlement is filled with challenges, from navigating a new education system to understanding cultural nuances. Our mission is to empower you, the parents, with the tools and knowledge needed to ensure a smooth transition for your family.
         </p>
         <p>
             Explore our site to find comprehensive guides, insightful articles, and interactive resources tailored to address the unique needs of migrant families. Whether you're seeking information on local schools, language support, or cultural integration, we're here to assist every step of the way. Let’s embark on this journey together to build a thriving future for your children in Australia. 
@@ -31,7 +34,8 @@
     </section>
     <section class="section2">
         <div class="content">
-            <h2>Info Hub</h2>
+            <h1>Info Hub</h1>
+            <img class="small-image" src="../assets/images/info_hub.png" alt="Info Hub Image">
             <p>Discover a wealth of resources in our Info Hub, designed to help you navigate the complexities of migrating and settling in Victoria.</p>
         </div>
         <div class="button-container">
@@ -39,12 +43,13 @@
         </div>
     </section>
     <section class="section3">
+        <div class="content">
+            <h1>Suburban Portal</h1>
+            <img class="small-image" src="../assets/images/school.png" alt="Info Hub Image">
+            <p>Find your community in Victoria with our Suburban Portal, connecting you to local services, schools, and migrant networks.</p>
+        </div>
         <div class="button-container">
             <a href="pages/subport.html" class="suburban-btn">Suburban Portal</a>
-        </div>
-        <div class="content">
-            <h2>Suburban Portal</h2>
-            <p>Find your community in Victoria with our Suburban Portal, connecting you to local services, schools, and migrant networks.</p>
         </div>
     </section>
     <section class="section4">
@@ -190,11 +195,11 @@
         </div>
     </section>
     <button id="scrollupbtn" onclick="topFunction()">↑</button>
-    <script src="../js/scrolltop.js" defer></script>
+    <script src="../js/general/scrolltop.js" defer></script>
     
     <footer id="footer"></footer>
-    <script src="../js/fetchfooter.js" defer></script>
-    <script src="../js/homenews.js" defer></script>
+    <script src="../js/general/fetchfooter.js" defer></script>
+    <script src="../js/home/homenews.js" defer></script>
     
 </body>
 </html>

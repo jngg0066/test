@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Title - Home</title>
+    <title>The Learning Compass - Suburb Portal</title>
     <link rel="stylesheet" href="../css/subport/subport.css" />
     <link rel="stylesheet" href="../css/general/scrolltop.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
   <header id="header"></header>
-  <script src="../js/fetchheader.js" defer></script>
+  <script src="../js/general/fetchheader.js" defer></script>
   <section class="sectionWel">
     <h1>What is Suburban Portal?</h1> 
     <p>
@@ -23,6 +23,7 @@
   </section>
 
   <section class="section1" id="section1">
+    <h1>School Locater</h1>
     <div class="container">
       <div class="map-bar">
         <div class="tab-container">
@@ -34,16 +35,60 @@
       </div>
       <div class="text-container" id="textContainer">
         <div id="tab1Content" style="display: none;">
-            <p>Monash</p>
+            <p>
+              <span style="color: blue; font-weight: bold;">Monash LGA>> </span>
+              The <span style="color: black; font-weight: bold;">Chinese community </span> 
+              in Victoria is the second largest in Australia. Many people in the Chinese community 
+              live in Melbourne’s south–eastern and eastern suburbs. TheCity of Monash is home to one 
+              of the largest Chinese communities in Victoria with 47,238 people. The City of Whitehorse 
+              is next with 44,445 people. The Chinese community is an established and steadily growing community in Victoria, with 27% of the population 
+              arriving between 2016 and 2021.
+            </p>
         </div>
         <div id="tab2Content" style="display: none;">
-            <p>Wyndham</p>
+            <p>
+              <span style="color: blue; font-weight: bold;">Wyndham LGA>> </span>
+              The <span style="color: black; font-weight: bold;">Indian community </span>
+              in Victoria is one of the largest in Australia.  Many people in the 
+              Indian community live in Melbourne’s south–eastern and north–western suburbs. The City 
+              of Wyndham is home to one of the largest Indian communities in Victoria with 65,433 people.
+              The City of Casey is next with 44,967 people. Between 2011 and 2021, the Indian community
+              in Victoria continued to grow. The majority (55.3%) of the Indian community arrived in 
+              Victoria during this period.
+            </p>
+
+            <p>
+              The <span style="color: black; font-weight: bold;">Filipino community  </span>
+              in Victoria is the second largest in Australia. Many people in the
+              Filipino community live in Melbourne’s south–western and south–eastern suburbs. The City 
+              of Wyndham is home to one of the largest Filipino communities in Victoria with 10,628 people.
+              The City of Casey is next with 9,485 people. Between 1981 and 2016, the increase in the 
+              Philippines–born population of Victoria soared and went from 3,55 to 51,287 people. 
+              The Filipino community is growing, with many people arriving between 2016 and 2021.
+            </p>
         </div>
         <div id="tab3Content" style="display: none;">
-          <p>Casey</p>
+          <p>
+            <span style="color: blue; font-weight: bold;">Casey LGA>> </span>
+            The <span style="color: black; font-weight: bold;">Sri Lankan community </span>
+            in Victoria is the largest in Australia. Many people in the 
+            Sri Lankan community live in Melbourne’s south–eastern suburbs. The City of Casey is 
+            home to one of the largest Sri Lankan communities in Victoria with 18,184 people. 
+            The City of Monash is next with 8,472 people. The Sri Lankan community is growing 
+            and many people arrived between 2001 and 2010.
+          </p>
         </div>
         <div id="tab4Content" style="display: none;">
-          <p>Brimbank</p>
+          <p>
+            <span style="color: blue; font-weight: bold;">Brimbank LGA>> </span>
+            The <span style="color: black; font-weight: bold;">Vietnamese community</span>
+            in Victoria is one of the largest in Australia. Many people
+            in the Vietnamese community live in Melbourne’s south–eastern and western suburbs. 
+            The City of Brimbank is home to one of the largest Vietnamese communities in Victoria 
+            with 32,861 people. The City of Greater Dandenong is next with 17,653 people. The 
+            Vietnamese community is well established in Victoria, with many arriving between 1981 
+            and 1990.
+          </p>
         </div>
       </div>
       <div class="dropdown" id="dropdownTab1"  data-tab="tab1">
@@ -54,7 +99,6 @@
           <option value="Clayton">Clayton</option>
           <option value="Glen waverley"> Glen waverley</option>
           <option value="Hughesdale">Hughesdale</option>
-          <option value="Huntingdale">Huntingdale</option>
           <option value="Mount waverley">Mount waverley</option>
           <option value="Mulgrave">Mulgrave </option>
           <option value="Oakleigh">Oakleigh</option>
@@ -122,7 +166,6 @@
           <option value="Kealba">Kealba</option>
           <option value="Keilor">Keilor</option>
           <option value="Keilor downs">Keilor downs</option>
-          <option value="Keilor north">Keilor north</option>
           <option value="Kings park">Kings park</option>
           <option value="St albans">St albans</option>
           <option value="St albans south">St albans south</option>
@@ -140,14 +183,13 @@
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
-  <script src="../js/subport.js" defer></script>
+  <script src="../js/subport/subport.js" defer></script>
 
   <button id="scrollupbtn" onclick="topFunction()">↑</button>
-  <script src="../js/scrolltop.js" defer></script>
+  <script src="../js/general/scrolltop.js" defer></script>
   
   <footer id="footer"></footer>
-  <script src="../js/fetchfooter.js" defer></script>
-  <script src="../js/homenews.js" defer></script>
+  <script src="../js/general/fetchfooter.js" defer></script>
 
 </body>
 </html>

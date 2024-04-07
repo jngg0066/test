@@ -33,6 +33,9 @@ html {
   height: auto; /* Change to auto so it adjusts based on content */
   padding: 20px;
 }
+.section1 h1 {
+  text-align: center;
+}
 
 .map {
   width: 100%; 
@@ -100,4 +103,13 @@ html {
   border: 2px solid #8f8b8b; /* Colored border */
   padding: 20px; /* Add some padding */
   margin-bottom: 20px; /* Add some margin */
+}
+
+.text-container p {
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-align: justify;
+  color: black; /* Change to your desired font color */
 }

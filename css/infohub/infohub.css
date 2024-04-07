@@ -125,13 +125,11 @@ html {
     font-size: 12px;
     margin-top: 2px;
 }
- 
-
 
 
 .section3 {
     background: #a1bdd0;
-    height: 1000px;
+    height: 900px;
     display: flex;
     justify-content: center;
     font-family: "Raleway", sans-serif;
@@ -227,4 +225,15 @@ html {
 
 .collapsible-content p {
     margin-bottom: 20px; 
+}
+
+.arrow {
+    float: right;
+    margin-left: 10px;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.collapsible.active .arrow {
+    transform: rotate(180deg);
 }

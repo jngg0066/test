@@ -8,69 +8,70 @@ html {
 }
 
 .sectionWel {
-    background: #F2EFF7;
-    height: 400px;
-    display: flex;
-    flex-direction: column;  
-    align-items: center;
-    justify-content: center;
+  background: #F2EFF7;
+  height: 500px;
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 
+.logo-container img {
+  max-width: 60%; /* Adjust this value as needed */
+  height: auto; /* This maintains the aspect ratio */
+  margin: auto; /* Center the image horizontally */
+  margin-bottom: 10px; /* Adjust this value to reduce space between the image and h1 */
 }
 
 .sectionWel h1 {
-    font-family: "Raleway", sans-serif;
-    font-size: 32px;
-    text-transform: uppercase;
-    letter-spacing: 8px;
+  font-family: "Raleway", sans-serif;
+  font-size: 32px; /* Remove the space between 32 and px */
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  margin-bottom: 10px; /* Adjust this value to reduce space between h1 and p */
 }
 
 .sectionWel p {
-    font-family: "Raleway", sans-serif;
-    font-size: 15px;
-    line-height: 1.5;  
-    text-align: center;  
-    margin-top: 20px; 
-    margin-left: 60px;
-    margin-right: 60px;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;  
+  text-align: center;
+  margin-top: 10px;  
+  margin-left: 60px;
+  margin-right: 60px;
 }
-  
+
 .section1 {
-    background: #ffffff;
-    height:600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Raleway", sans-serif;
-    font-size: 32px;
-    text-transform: uppercase;
-    letter-spacing: 8px;
+  background: #ffffff;
+  height:600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
 }
 
 .slogan-section {
     position: relative;
     text-align: center;
-    background-size: cover; /* This will cover the entire area */
-    background-position: center; /* This will center the image in the area */
-    background-repeat: no-repeat; /* This will prevent the image from repeating */
-    overflow: hidden;
-}
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 800px; /* Make the section full viewport height, or adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* This will center the text horizontally and vertically */
+  }
 
-.background-image {
-    width: 100%;
-    height: auto; /* Adjust the height as needed */
-    opacity: 0.7; /* You can adjust the opacity to your liking */
-}
-
-.slogan-text {
-    position: absolute;
-    top: 50%; /* Adjust as necessary to center vertically */
-    left: 50%; /* Adjust as necessary to center horizontally */
-    transform: translate(-50%, -50%);
-    font-size: 3em; /* Adjust the size as needed */
-    color: black; /* Set the slogan text color to black */
-    animation: pop-up 2s ease-out infinite; /* Apply the infinite animation */
-}
-
+  .slogan-text {
+    font-size: 70px;
+    color: #5bc3ff;
+    opacity: 0.7; /* Adjust the opacity to your liking */
+    animation: pop-up 2s ease-out infinite;
+  }
 /* Keyframes for the pop-up animation */
 @keyframes pop-up {
     0%, 100% {
@@ -82,18 +83,44 @@ html {
         opacity: 1;
     }
 }
-  
+
+
 .section2 {
     background: #a6ccb8;
-    height:600px;
+    height:400px;
     display: flex;
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
-    font-family: "Raleway", sans-serif;
-    font-size: 32px;
-    text-transform: uppercase;
-    letter-spacing: 8px;
+    margin-bottom: 20px;
 }
+.section2 h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  margin-bottom: 10px; 
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section2 p {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;  
+  text-align: center;
+  margin-top: 10px;  
+  margin-left: 60px;
+  margin-right: 60px;
+}
+.small-image {
+  display: block; 
+  margin: 0 auto; 
+  width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
 
 .info-section,
 .suburban-section {
@@ -118,45 +145,224 @@ html {
     margin-left: 2%; /* Add some margin between text and button */
 }
 
-/* Button styling */
-.info-btn,
-.suburban-btn {
-    display: inline-block; /* Make the button an inline block */
-    padding: 10px 20px; /* Padding inside the button */
-    background-color: #007BFF; /* Button color */
-    color: white; /* Button text color */
-    text-decoration: none; /* Remove underline from links */
-    border-radius: 5px; /* Rounded corners */
-    text-align: center; /* Center text inside the button */
-    width: 100%; /* Make the button expand to the width of its container */
-    box-sizing: border-box; /* Include padding and border in the button's width */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-}
+
+/* Add a general rule for the sections to ensure they do not exceed the viewport width */
+section {
+    max-width: 100%; /* This ensures the section does not exceed the width of the page */
+    overflow: hidden; /* Prevents content from overflowing the section's boundaries */
+    box-sizing: border-box; /* Ensures that padding is included within the width */
+  }
+  
+  /* Styles for the slogan section */
+  .section1 .slogan-section {
+    position: relative;
+    text-align: center; /* Center slogan text */
+  }
+  
+  .section1 .background-image {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensures the image fits within the container */
+  }
+  
+  .section1 .slogan-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Adjust font-size and color as needed */
+  }
+  
+  /* Styles for sections with content and buttons */
+  .section2,
+  .section3 {
+    display: flex;
+    justify-content: space-between; /* Align items on opposite ends */
+    align-items: center; /* Center items vertically */
+    padding: 20px; /* Adjust padding as needed */
+    margin: auto; /* Center sections horizontally */
+  }
+  
+  /* Ensure the content and button containers do not exceed half the width of the section */
+  .section2 .content,
+  .section3 .content,
+  .section2 .button-container,
+  .section3 .button-container {
+    flex-basis: 38%; /* Adjust this percentage based on your design needs */
+    padding: 10px; /* Adds padding within the containers */
+  }
+  
+  .info-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF; /* Adjust to your preferred color */
+    background-image: linear-gradient(to right, #007BFF 0%, #009FFF 51%, #007BFF 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1em;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  /* Shimmer effect using pseudo-elements */
+  .info-btn::before, .info-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+    transition: all 0.3s ease;
+  }
+  
+  .info-btn::before {
+    opacity: 0;
+    transition-duration: 0.3s;
+    transition-timing-function: step-end;
+  }
+  
+  .info-btn::after {
+    opacity: 0;
+    transition-duration: 0.3s;
+    transition-timing-function: step-start;
+  }
+  
+  .info-btn:hover::before {
+    opacity: 1;
+    transform: translateX(-100%);
+  }
+  
+  .info-btn:hover::after {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+  
+  /* Dynamic hover effect */
+  .info-btn:hover {
+    background-size: 200% auto; /* Increase background size for dynamic gradient effect */
+    background-position: right center; /* Change background position */
+  }
+  
+  
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .section2, .section3 {
+      flex-direction: column; /* Stack the elements on smaller screens */
+      text-align: center; /* Center the content */
+    }
+  
+    .section2 .content,
+    .section3 .content,
+    .section2 .button-container,
+    .section3 .button-container {
+      flex-basis: 100%; /* Allow each container to take full width on smaller screens */
+      padding: 10px 0; /* Adjust padding for smaller screens */
+    }
+  
+    .info-btn,
+    .suburban-btn {
+      width: 100%; /* Full width for buttons on smaller screens */
+    }
+  }
 
   
 .section3 {
     background: #f3e4d7;
-    height:600px;
+    height:400px;
     display: flex;
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
-    font-family: "Raleway", sans-serif;
-    font-size: 32px;
-    text-transform: uppercase;
-    letter-spacing: 8px;
+    margin-bottom: 20px;;
 }
 
+.section3 h1 {
+font-family: "Raleway", sans-serif;
+font-size: 32px; /* Remove the space between 32 and px */
+text-transform: uppercase;
+letter-spacing: 8px;
+margin-bottom: 10px; /* Adjust this value to reduce space between h1 and p */
+text-align: center;
+margin-bottom: 20px;
+}
+.section3 p {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;  
+  text-align: center;
+  margin-top: 10px;  
+  margin-left: 60px;
+  margin-right: 60px;
+}
 /* Adjust the alignment for the Suburban Portal section to be the opposite */
 .suburban-section {
     flex-direction: row-reverse; /* Flip the order of elements */
 }
 
-/* Hover effect */
-.info-btn:hover,
-.suburban-btn:hover {
-    background-color: #0056b3; /* Darker color on hover */
-}
 
+.suburban-btn {
+    padding: 10px 20px;
+    border: none; /* Remove borders */
+    background-color: #8A2BE2; /* Starting color for the button */
+    background-image: linear-gradient(to right, #8A2BE2 0%, #9B30FF 51%, #8A2BE2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1em;
+    position: relative; /* Needed for the pseudo-elements used in the shimmer effect */
+    overflow: hidden; /* Ensures the pseudo-elements are clipped to the button shape */
+    transition: all 0.3s ease; /* Transition for smooth hover effect */
+    cursor: pointer; /* Cursor changes to pointer to indicate a button */
+  }
+  
+  /* Before and after pseudo-elements for the shimmer effect */
+  .suburban-btn::before, .suburban-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+    transition: all 0.3s ease;
+  }
+  
+  .suburban-btn::before {
+    opacity: 0;
+    transition-duration: 0.3s;
+    transition-timing-function: step-end;
+  }
+  
+  .suburban-btn::after {
+    opacity: 0;
+    transition-duration: 0.3s;
+    transition-timing-function: step-start;
+  }
+  
+  .suburban-btn:hover::before {
+    opacity: 1;
+    transform: translateX(-100%);
+  }
+  
+  .suburban-btn:hover::after {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+  
+  /* Hover effect to change the button size and background position */
+  .suburban-btn:hover {
+    background-size: 200% auto; /* Increase background size for dynamic gradient effect */
+    background-position: right center; /* Change background position */
+    color: #FFF; /* Optional: Change the text color on hover if needed */
+  }
+  
 
 .section4 {
     background: #F5F1F1;
@@ -235,6 +441,8 @@ html {
     color: #ffffff;
     background-color: #000000;
 }
+
+
 
 
 
