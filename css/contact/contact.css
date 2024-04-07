@@ -1,0 +1,81 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.sectionWel {
+    background: #F2EFF7;
+    height: 250px;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    justify-content: center;
+
+}
+
+.sectionWel h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 8px;
+}
+
+.sectionWel p {
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;  
+    text-align: center;  
+    margin-top: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+  
+.section1 {
+    background: #e2aac4;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Adjust as needed */
+}
+
+.contact-info,
+.business-hours {
+    width: 45%; /* Adjust width as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-info,
+.address-info,
+.contact-details {
+    width: 100%;
+    padding: 20px;
+}
+
+
+.team-info h2,
+.address-info h2,
+.contact-details h2, 
+.business-hours h2 {
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+
+}
+
+.team-info p,
+.address-info p,
+.contact-details p,
+.business-hours p {
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 8px;
+    font-size: 18px;
+    margin-bottom: 8px;
+    text-align: center;
+}
