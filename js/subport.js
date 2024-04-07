@@ -75,131 +75,63 @@ function fetchAllSchoolsData(tabId) {
     // Determine API endpoint based on the tab selected
     switch(tabId) {
         case 'tab1':
-            apiUrl = 'https://1qktndqm8l.execute-api.ap-southeast-2.amazonaws.com/prod2';
+            apiUrl = '/schools/tab1/Show All'; // Flask endpoint for tab1
             break;
         case 'tab2':
-            apiUrl = 'https://kbfoclo7dc.execute-api.ap-southeast-2.amazonaws.com/prod3';
+            apiUrl = '/schools/tab2/Show All'; // Flask endpoint for tab2
             break;
         case 'tab3':
-            apiUrl = 'https://uwvl29qlxg.execute-api.ap-southeast-2.amazonaws.com/prod5';
+            apiUrl = '/schools/tab3/Show All'; // Flask endpoint for tab3
             break;
         case 'tab4':
-            apiUrl = 'https://c3nn2v55vb.execute-api.ap-southeast-2.amazonaws.com/prod5';
+            apiUrl = '/schools/tab4/Show All'; // Flask endpoint for tab4
             break;
         default:
-            apiUrl = '';
+            console.error('Invalid tabId');
+            return;
     }
 
-    if (apiUrl === '') {
-        console.error('Invalid API URL');
-        return;
-    }
-
-    // Fetch schools data from the determined API endpoint
+    // Fetch schools data from the Flask endpoint
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            const schools = JSON.parse(data.body).map(school => ({
-                Education_Sector: school.Sector,
-                School_Name: school.Name,
-                Suburb: school.Town,
-                LGA_Name: school.LGA,
-                Longitude: school.Longitude,
-                Latitude: school.Latitude
-            }));
-
             // Add markers for all schools
-            schools.forEach(school => addMarker(school));
+            data.forEach(school => addMarker(school));
         })
         .catch(error => console.error('Error fetching data:', error));
 }
 
 function fetchSchoolsData(selectedSuburb, tabId) {
-    if (!selectedSuburb || selectedSuburb === 'Show All') {
-        // If no suburb is selected or 'Show All' is selected, fetch all schools data
-        fetchAllSchoolsData(tabId);
-        return;
-    }
-
-    // Clear previous markers from the map
-    clearMarkers();
-
     let apiUrl;
     // Determine API endpoint based on the tab selected
     switch(tabId) {
         case 'tab1':
-            apiUrl = 'https://1qktndqm8l.execute-api.ap-southeast-2.amazonaws.com/prod2';
+            apiUrl = `/schools/tab1/${selectedSuburb}`; // Flask endpoint for tab1
             break;
         case 'tab2':
-            apiUrl = 'https://kbfoclo7dc.execute-api.ap-southeast-2.amazonaws.com/prod3';
+            apiUrl = `/schools/tab2/${selectedSuburb}`; // Flask endpoint for tab2
             break;
         case 'tab3':
-            apiUrl = 'https://uwvl29qlxg.execute-api.ap-southeast-2.amazonaws.com/prod5';
+            apiUrl = `/schools/tab3/${selectedSuburb}`; // Flask endpoint for tab3
             break;
         case 'tab4':
-            apiUrl = 'https://c3nn2v55vb.execute-api.ap-southeast-2.amazonaws.com/prod5';
+            apiUrl = `/schools/tab4/${selectedSuburb}`; // Flask endpoint for tab4
             break;
         default:
-            apiUrl = '';
+            console.error('Invalid tabId');
+            return;
     }
 
-    if (apiUrl === '') {
-        console.error('Invalid API URL');
-        return;
-    }
-
-    // Fetch schools data from the determined API endpoint
+    // Fetch schools data from the Flask endpoint
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            const schools = JSON.parse(data.body).map(school => ({
-                Education_Sector: school.Sector,
-                School_Name: school.Name,
-                Suburb: school.Town,
-                LGA_Name: school.LGA,
-                Longitude: school.Longitude,
-                Latitude: school.Latitude
-            }));
-
-            // Filter schools based on selected suburb
-            const filteredData = schools.filter(school => school.Suburb === selectedSuburb);
-
+            // Clear previous markers from the map
+            clearMarkers();
             // Add markers for the filtered data
-            filteredData.forEach(school => addMarker(school));
+            data.forEach(school => addMarker(school));
         })
         .catch(error => console.error('Error fetching data:', error));
 }
 
-
-var map; // Declare map variable globally
-var markers = []; // Array to store markers
-
-function initializeMap() {
-    // Initialize Leaflet map
-    map = L.map('map').setView([-37.8136, 144.9631], 10); // Default view for Victoria, Australia
-
-    // Add Tile layer
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: 'Â© OpenStreetMap contributors'
-    }).addTo(map);
-}
-
-function addMarker(school) {
-    var marker = L.marker([school.Latitude, school.Longitude]);
-    var popupContent = `
-        <b>School Name:</b> ${school.School_Name}<br>
-        <b>Education Sector:</b> ${school.Education_Sector}<br>
-        <b>Suburb:</b> ${school.Suburb}<br>
-        <b>LGA Name:</b> ${school.LGA_Name}
-    `;
-    marker.bindPopup(popupContent);
-    marker.addTo(map); // Add marker to the map
-    markers.push(marker); // Push marker to the array
-}
-
-function clearMarkers() {
-    // Remove all markers from the map
-    markers.forEach(marker => marker.removeFrom(map));
-    // Clear markers array
-    markers = [];
-}
+// Other functions remain the same as in the original subport.js
