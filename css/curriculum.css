@@ -228,7 +228,7 @@ h6,
     align-items: center;
     justify-content: center;
     color: #FFFFFF;
-    background: #FE5D37;
+    background: transparent;
     border: 1px solid #FFFFFF;
     border-radius: 45px;
     font-size: 22px;
@@ -237,9 +237,8 @@ h6,
 
 .header-carousel .owl-nav .owl-prev:hover,
 .header-carousel .owl-nav .owl-next:hover {
-    background: transparent; /* Remove background color on hover */
-    border-color: #FFFFFF; /* Keep border color on hover */
-    color: #FFFFFF; /* Keep arrow color on hover */
+    background: var(--primary);
+    border-color: var(--primary);
 }
 
 
@@ -557,3 +556,11 @@ h6,
     border-right: none;
 }
 
+.divider {
+    width: 800px; /* Adjust width as needed */
+    height: 2px; /* Adjust height as needed */
+    background-color: #cccccc; /* Choose your desired color */
+    margin: 20px auto; /* Center the divider horizontally and adjust margin as needed */
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }

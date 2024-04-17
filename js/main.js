@@ -14,14 +14,7 @@
         }, 1);
     };
     spinner();
-
-    $(document).ready(function() {
-        // Fetch navbar content and insert it into the navbarContainer div
-        $("#navbarContainer").load("../pages/header-footer/navbar.html");
-    });
-
-
-
+ 
     // Sticky Navbar
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
@@ -85,7 +78,8 @@
 
     $(document).ready(function() {
         // Fetch navbar content and insert it into the navbarContainer div
-        $("#footerContainer").load("../pages/header-footer/footer.html");
+        $("#footerContainer").load("../pages/navbar-footer/footer.html");
     });
 })(jQuery);
 
+ 

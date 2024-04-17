@@ -98,7 +98,20 @@ h6,
     font-family: 'Lobster Two', cursive;
 }
 
-
+.h-100 h4 {
+  font-size: 22px; /* Specify the desired font size */
+}
+.h-100 p,
+.h-100 ul li {
+  font-size: 15px; /* Specify the desired font size */
+}
+.divider {
+    margin-top: 0; 
+    margin-bottom: 0; 
+  }
+ .container-xxl {
+    margin-bottom: 0; 
+  }
 /*** Navbar ***/
 .navbar .navbar-nav .nav-link {
     padding: 30px 15px;
@@ -228,7 +241,7 @@ h6,
     align-items: center;
     justify-content: center;
     color: #FFFFFF;
-    background: #FE5D37;
+    background: transparent;
     border: 1px solid #FFFFFF;
     border-radius: 45px;
     font-size: 22px;
@@ -237,19 +250,18 @@ h6,
 
 .header-carousel .owl-nav .owl-prev:hover,
 .header-carousel .owl-nav .owl-next:hover {
-    background: transparent; /* Remove background color on hover */
-    border-color: #FFFFFF; /* Keep border color on hover */
-    color: #FFFFFF; /* Keep arrow color on hover */
+    background: var(--primary);
+    border-color: var(--primary);
 }
 
 
 .page-header {
-    background: linear-gradient(#00000033, #00000033), center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), center center no-repeat;
     background-size: cover;
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
-    color: #ffffff80;
+    color: rgba(255, 255, 255, .5);
 }
 
 
@@ -272,7 +284,7 @@ h6,
     height: 100%;
     top: 0;
     left: 0;
-    background: #ffffffe6;
+    background: rgba(255, 255, 255, .9);
     transition: .5s;
     z-index: 1;
 }
@@ -315,7 +327,7 @@ h6,
     height: 100%;
     top: 0;
     left: 0;
-    background: #ffffffe6;
+    background: rgba(255, 255, 255, .9);
     transition: .5s;
     z-index: 1;
 }
@@ -358,6 +370,39 @@ h6,
     margin-top: -10px;
 }
 
+.collapsible {
+    background-color: #f2d8d8;
+    color: #431010;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 5px;
+}
+
+.active, .collapsible:hover {
+    background-color: #c48787;
+}
+
+.collapsible-content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1ebeb;
+}
+
+.button-text {
+    font-size: 5px; 
+}
+.classes-item .collapsible,
+.classes-item .button-text {
+    font-size: 16px !important;
+}
+
+
+
 /*** Team ***/
 .team-item .team-text {
     position: absolute;
@@ -381,19 +426,7 @@ h6,
 }
 
 
-/*** News ***/
-.news-image {
-    width: 50px; /* Adjust the width as per your preference */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 10px; /* Adjust the margin as needed */
-    border-radius: 10px; /* Add border radius for rounded corners */
-}
-
-/* CSS to align the image and heading horizontally */
-.image-heading-container {
-    display: flex;
-    align-items: center;
-}
+/*** Testimonial ***/
 .news-carousel {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -527,7 +560,7 @@ h6,
 }
 
 .footer .form-control {
-    border-color: #ffffff80;
+    border-color: rgba(255,255,255,0.5);
 }
 
 .footer .copyright {
@@ -543,7 +576,7 @@ h6,
 .footer .footer-menu a {
     margin-right: 15px;
     padding-right: 15px;
-    border-right: 1px solid #ffffff1a;
+    border-right: 1px solid rgba(255, 255, 255, .1);
 }
 
 .footer .copyright a:hover,
@@ -557,3 +590,18 @@ h6,
     border-right: none;
 }
 
+.container.py-5 {
+  color: #ffffff;
+  text-align: left;
+  margin-left: 100px;
+  min-height: 300px;
+}
+
+.divider {
+    width: 800px; /* Adjust width as needed */
+    height: 2px; /* Adjust height as needed */
+    background-color: #cccccc; /* Choose your desired color */
+    margin: 20px auto; /* Center the divider horizontally and adjust margin as needed */
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
