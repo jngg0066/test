@@ -10,6 +10,7 @@ body {
 }
 
 .container {
+  text-align: center; /* Center align all content */
   width: min(80%, 40em); /* Adjust the width as needed */
   margin: 3em auto; /* Center the container horizontally and add top margin */
 }
@@ -17,6 +18,10 @@ body {
 .container * {
   border: none;
   outline: none;
+}
+
+.container h2 {
+  margin-bottom: 20px; /* Add some space below the header for better appearance */
 }
 
 .input-wrapper {
@@ -92,6 +97,100 @@ p {
   font-size: 0.87em;
   color: #707070;
   font-weight: 400;
+}
+
+.help-tip {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-left: 10px; /* Adjusted margin-left to position on the right side */
+  border: 2px solid #444;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  cursor: default;
+}
+
+
+.help-tip:before{
+  content:'?';
+  font-family: sans-serif;
+  font-weight: normal;
+  color:#444;
+}
+
+.help-tip:hover p{
+  display:block;
+  transform-origin: 100% 0%;
+  -webkit-animation: fadeIn 0.3s ease;
+  animation: fadeIn 0.3s ease;
+}
+
+/* The tooltip */
+.help-tip p {    
+  display: none;
+  font-family: sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  background-color: #FFFFFF;
+  padding: 12px 16px;
+  width: 178px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 5%);
+  border-radius: 3px;
+/* 	border: 1px solid #E0E0E0; */
+  box-shadow: 0 0px 20px 0 rgba(0,0,0,0.1);
+  color: #37393D;
+  font-size: 12px;
+  line-height: 18px;
+  z-index: 99;
+}
+
+.help-tip p a {
+  color: #067df7;
+  text-decoration: none;
+}
+
+.help-tip p a:hover {
+  text-decoration: underline;
+}
+
+/* The pointer of the tooltip */
+.help-tip p:before { 
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-bottom-color:#FFFFFF;
+  top: -9px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ /* Prevents the tooltip from being hidden */
+.help-tip p:after {
+  width: 10px;
+  height: 40px;
+  content:'';
+  position: absolute;
+  top: -40px;
+  left: 0;
+}
+
+/* CSS animation */
+@-webkit-keyframes fadeIn {
+    0% { opacity:0; }
+    100% { opacity:100%; }
+}
+
+@keyframes fadeIn {
+    0% { opacity:0; }
+    100% { opacity:100%; }
 }
 
 /* Mobile - 360px */
