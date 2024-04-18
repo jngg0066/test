@@ -4,35 +4,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>School Entry Year Calculator</title>
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
   <!-- Stylesheet -->
   <link rel="stylesheet" href="test.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="input-wrapper">
-      <input type="date" id="birth-year-input" />
-      <button id="calc-entry-year-btn">Calculate</button>
+<!-- Content from text.html -->
+<section id="RTsbs-459">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Kindergarten / Early Learning</span>
+            <h2 class="cs-title">Starting Age: 3 - 4</h2>
+            <ul class="cs-text">
+                <li>Kindergarten are also known as kindy, pre-school, or early learning. </li> 
+                <li> It is a structured learning program for children typically administered by qualified teaching professionals.</li>
+                <li>Children usually attend a four-year-old kindergarten program in the year prior to attending primary school, with some also completing three-year-old kindergarten programs.</li>
+                <li>Kindergarten programs are offered at various facilities, including kindergartens, childcare and early learning centers, and some private schools.</li>
+             </ul>
+         </div>
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/grass2.jpg">
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/grass2.jpg">
+            <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/grass2.jpg" alt="grass" width="649" height="617">
+        </picture>
     </div>
-    <div class="output-wrapper">
-      <div>
-        <p>The child will enter Foundation Year (Prep) in Year</p>
-        <span id="prep-years">-</span>
-      </div>
-      <div>
-        <p>The child will enter 1st Year (Primary School) in Year</p>
-        <span id="primary-school-years">-</span>
-      </div>
-      <div>
-        <p>The child will enter 7th Year (High School) in Year</p>
-        <span id="high-school-years">-</span>
-      </div>
+</section>
+
+<section id="RTsbsr-459">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Primary School</span>
+            <h2 class="cs-title">Starting Age: 5-6 </h2>
+            <ul class="cs-text">
+              <li>Primary school is the start of the formal school system and is compulsory for all students.</li>
+              <li>The first year of primary school is known by different names in each state. In Victoria it is known as prep.</li>
+              <li>Primary school runs for seven years, with prep or the first year of school essentially being year 0, followed by year 1 to 6.</li>
+              <li>After completing primary school, students enter high school for a further six years of schooling from grade 7 through to grade 12.</li>
+          </ul>
+         </div>
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/grass2.jpg">
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/grass2.jpg">
+            <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/grass2.jpg" alt="grass" width="649" height="617">
+        </picture>
+    </div>
+</section>
+<!-- End of content from text.html -->
+
+<!-- Calculator Section -->
+<div class="container">
+  <div class="input-wrapper">
+    <input type="date" id="birth-year-input" />
+    <button id="calc-entry-year-btn">Calculate</button>
+  </div>
+  <div class="output-wrapper">
+    <div>
+      <p>The child will enter Foundation Year (Prep) in Year</p>
+      <span id="prep-years">-</span>
+    </div>
+    <div>
+      <p>The child will enter 1st Year (Primary School) in Year</p>
+      <span id="primary-school-years">-</span>
+    </div>
+    <div>
+      <p>The child will enter 7th Year (High School) in Year</p>
+      <span id="high-school-years">-</span>
     </div>
   </div>
-  <!-- Script -->
-  <script src="test.js"></script>
+</div>
+<!-- End of Calculator Section -->
+
+<!-- Script -->
+<script src="test.js"></script>
 </body>
 </html>
