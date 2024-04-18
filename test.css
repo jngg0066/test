@@ -45,8 +45,13 @@ input {
 }
 
 button {
-  color: #ffffff;
-  background-color: #7d56f3;
+  color: #000000;
+  background-color: #a5faef;
+}
+
+button:hover {
+  color: #a5faef;
+  background-color: #000000;
 }
 
 .output-wrapper {
@@ -274,6 +279,7 @@ p {
 @media only screen and (min-width: 0rem) {
   #RTsbsr-459 {
       background-color: #f7f7f7;
+      height: 570px;
   }
 }
 /* Tablet - 768px */
@@ -293,4 +299,8 @@ p {
       /* 90px - 108px */
       margin-left: clamp(5rem, 8.5vw, 6.75rem);
   }
+}
+
+.small-text li {
+  font-size: 0.9em; /* Adjust the font size as needed */
 }
