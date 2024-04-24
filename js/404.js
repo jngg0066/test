@@ -2,11 +2,12 @@ $(document).ready(function() {
     var validPaths = [
         '/', 
         '/index.html', 
-        '/pages/infohub.html', 
-        '/pages/subport.html', 
-        '/pages/curriculum.html', 
-        '/pages/slang.html',
-        '/pages/animal.html'
+        '/pages/IT1/infohub.html', 
+        '/pages/IT1/subport.html', 
+        '/pages/IT2/calculator.html',
+        '/pages/IT2/curriculum.html', 
+        '/pages/IT2/slang.html',
+        '/pages/IT2/animal.html',
     ];  
 
     var currentPath = window.location.pathname;

@@ -78,7 +78,7 @@
 
     $(document).ready(function() {
         // Fetch navbar content and insert it into the navbarContainer div
-        $("#footerContainer").load("../pages/navbar-footer/footer.html");
+        $("#footerContainer").load("../../pages/navbar-footer/footer.html");
     });
 })(jQuery);
 
