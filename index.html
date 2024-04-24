@@ -24,6 +24,9 @@
     <link href="../lib/animate/animate.min.css" rel="stylesheet">
     <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
+    <!-- Include reCAPTCHA script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <!-- Customized Bootstrap Stylesheet -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
@@ -31,8 +34,15 @@
     <link href="../css/style.css" rel="stylesheet">
     
 </head>
-
 <body>
+    <!-- Your form with reCAPTCHA -->
+    <form action="submit.php" method="post">
+        <!-- Other form fields -->
+        <div class="g-recaptcha" data-sitekey="6LeKk8UpAAAAALAXYrJ2Pj3Vt25hXbNgsslGtf9x"></div>
+        <button type="submit">Submit</button>
+    </form>
+
+
     <div class="container-xxl bg-white p-0">
         <!-- Spinner -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
