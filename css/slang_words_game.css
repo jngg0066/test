@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    background-color: #5372ef;
+  }
+ /* Specific styles for the slang game */
+.container_slang {
+    width: 90%;
+    max-width: 37.5em;
+    margin: 2em auto; /* Centers the container and adds space above and below */
+    background-color: #5372ef;
+    padding: 2em;
+    border-radius: 0.8em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+}
+
+.container_slang h3 {
+    text-align: center;
+    margin-bottom: 1em;
+    color: #333;
+    font-size: 1.5em; /* Larger font size for visibility */
+}
+
+.draggable-objects,
+.drop-points {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em 0;
+}
+
+.draggable-image {
+    width: 8em;
+    cursor: grab; /* Changes cursor to indicate draggable */
+}
+
+.draggable-image img {
+    width: 100%; /* Ensures the image takes the full width of its container */
+    height: auto; /* Keeps the image aspect ratio */
+    filter: drop-shadow(0 0.3em 0.6em rgba(0, 0, 0, 0.25));
+}
+
+.countries {
+    width: 10em;
+    height: 8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #010c39;
+    border-radius: 0.8em;
+    background-color: #f9f9f9; /* Light background for drop areas */
+}
+
+.dropped {
+    background-color: #e5ffc8; /* Light green background when dropped */
+    border-color: #4CAF50; /* Green border to indicate success */
+}
+
+.controls-container_slang {
+    text-align: center;
+    padding: 1em;
+    background-color: transparent; /* Removes any background color */
+}
+
+.controls-container_slang button {
+    font-size: 1em;
+    padding: 0.5em 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+.controls-container_slang p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.hide {
+    display: none;
+}

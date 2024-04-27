@@ -1,7 +1,7 @@
 /********** Template CSS **********/
 :root {
     --primary: #FE5D37;
-    --light: #FFF5F3;
+     --light: #FFF5F3;
     --dark: #103741;
 }
 
@@ -105,10 +105,7 @@ h6,
 .h-100 ul li {
   font-size: 15px; /* Specify the desired font size */
 }
-.divider {
-    margin-top: 0; 
-    margin-bottom: 0; 
-  }
+ 
  .container-xxl {
     margin-bottom: 0; 
   }
@@ -602,192 +599,418 @@ h6,
     height: 2px; /* Adjust height as needed */
     background-color: #cccccc; /* Choose your desired color */
     margin: 20px auto; /* Center the divider horizontally and adjust margin as needed */
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
+    margin-top: 30px !important;
+   }
 
-
-/*** Game  ***/
-
-  * {
-    padding: 0;
-    margin: 0;
+* {
+     margin: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-  }
-  body {
-    height: 100%;
-    margin: 0;
+}
+
+body {
+    background-color: #2274A5;
+}
+
+.calc-all-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Center the calculator section horizontally */
+    align-items: center; /* Center the calculator section vertically */
+    height: 100vh; /* Make the container take the full height of the viewport */
+
+}
+
+.calc-container {
+    text-align: center; /* Center align all content */
+    height: 600px;
+    padding: 20px; /* Add padding to the content within the calculator */
+    
+}
+
+.calc-container h2 {
+    margin-top: 40px; /* Add more space on the top */
+    margin-bottom: 20px; /* Add some space below the header for better appearance */
+}
+ 
+.input-wrapper {
+    justify-content: center; /* Center the calculator section horizontally */
+    width: 500px;
+    padding: 20px; /* Add padding to the content within the calculator */
+    background-color: #ffffff;
+    padding: 1.87em 1.5em;
+    border-radius: 0.5em;
+    border: 0.5px solid #2d90c9;
+    box-shadow: 0 0.93em 1.25em rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+    margin-left: 200px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 1em;
+}
+ 
+
+input {
+    font-weight: 500;
+    border-radius: 0.31em;
+    border: 3px solid #2274A5;
+    cursor: pointer; /* Add this line to change cursor to pointer */
+    background-color: #eeeeff;
+    color: #080808;
+    padding: 1.2em 1.25em;
+    font-size: 0.87em;
+    border: none;
+    outline: none;
   }
 
-  .intro-container {
-    display: flex; /* Use flexbox to align children */
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center children horizontally */
-    justify-content: center; /* Center children vertically */
-    text-align: center; /* Ensure the text within is centered as well */
-    height: 100%; /* Take the full height of the container */
-    padding: 20px; /* Add some padding */
-  }
-  
-  /* Animations for title and slogan */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .animated-title {
-    animation: fadeIn 1s ease-out forwards;
-  }
-  
-  .animated-slogan {
-    animation: fadeIn 1s ease-out forwards;
-    animation-delay: 0.5s; /* Delay to start after title animation */
-  }
-  
-  
-  /* Container for the buttons */
-  .button-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px; /* Space between buttons */
-    margin-top: 20px; /* Space above the buttons */
-  }
-  
-  /* Styles for buttons */
-  #start, #rules {
-    /* Add styles for your buttons here */
-    padding: 10px 20px;
-    margin-top: 20px; /* Space above the buttons */
-    cursor: pointer;
-    /* ... Other styles ... */
-  }
-  
-  /* Hide/Show class */
-  .hide {
-    display: none;
-  }
-  
-  
-   
-  .game-container {
-    position: relative;
-    width: 100%;
-    display: grid;
-    gap: 1em;
-  }
-  .stats-container {
-    text-align: right;
-    margin-bottom: 1.2em;
-  }
-  .stats-container span {
-    font-weight: 600;
-  }
-  .card-container {
-    position: relative;
-    width: 9em;
-    height: 9em;
-    cursor: pointer;
-  }
-  .card-before,
-  .card-after {
-    position: absolute;
-    border-radius: 5px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 4px solid #000000;
-    transition: transform 0.7s ease-out;
-    backface-visibility: hidden;
-  }
-  .card-before {
-    background-image: url('../../img/images/2.jpg'); /* Update this with the actual path to your logo */
-    background-size: cover; /* Cover the entire space of the card */
-    background-position: center; /* Center the background image */
-    color: transparent; /* Hide the question mark */
-  }
-  .card-after {
-    background-color: #ffffff;
-    transform: rotateY(180deg);
-  }
-  
-  .card-after img {
-    width: 100%;    /* Make sure the image fits the card size */
-    height: 100%;   /* Make sure the image fits the card size */
-    object-fit: cover; /* Scale the image to maintain aspect while filling the area */
-  }
-  .card-container.flipped .card-before {
-    transform: rotateY(180deg);
-  }
-  .card-container.flipped .card-after {
-    transform: rotateY(0deg);
-  }
-  .controls-container {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    background-color: #f4c531;
-    top: 0;
-  }
-  button {
-    border: none;
-    border-radius: 0.3em;
-    padding: 1em 1.5em;
-    cursor: pointer;
-  }
-  #stop {
-    font-size: 1.1em;
-    display: block;
-    margin: 1.1em auto 0 auto;
-    background-color: #000000;
-    color: #ffffff;
-  }
-  .controls-container button {
-    font-size: 1.3em;
-    box-shadow: 0 0.6em 2em rgba(86, 66, 0, 0.2);
-  }
-  .hide {
-    display: none;
-  }
-  
-  /* Game over container styling for centering content */
-  #result {
-    text-align: center; /* Center text */
-    padding: 20px;
-    background-color: rgba(244, 197, 49, 0.9);
-    border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
+button {
+    font-weight: 500;
+    border-radius: 0.31em;
+    cursor: pointer; /* Add this line to change cursor to pointer */
+    color: #000000;
+    background-color: #2d90c9;
+    border: 0.5px solid #eeeeff !important; /* Add a black border */
+ }
+
+button:hover {
+    color: #000000;
+    background-color: #58aad9;
+}
+
+.output-wrapper {
+    width: 100%; /* Adjust the width as needed */
     margin: 0 auto; /* Center the container horizontally */
-    position: absolute; /* Position it at the bottom */
-    bottom: 20px; /* Adjust the position as needed */
+    display: flex;
+    justify-content: space-between;
+}
+
+.output-wrapper div {
+    background-color: #59aada;
+    border-radius: 0.5em;
+    color: #080808;
+    padding: 1.5em 1em;
+    box-shadow: 0 0.5em 1em #0000001a;
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin-right: 50px;
+    margin-left: 50px;
+    width: 200px; /* Adjust the width for better alignment */
+}
+
+.output-wrapper div:hover {
+    transform: translateY(-0.2em);
+}
+
+.output-wrapper div p {
+    font-size: 1em; /* Increase font size for better readability */
+    color: #000000;
+    margin-bottom: 0.5em;
+}
+
+span {
+    font-size: 1.8em; /* Adjust the font size to your preference */
+    font-weight: 500;
+    color: #FE5D37;
+}
+
+.calc-container span {
+    color: #e6e2e1; /* Change the color to your desired color */
+}
+
+
+p {
+    font-size: 0.87em;
+    color: #707070;
+    font-weight: 400;
+}
+
+.help-tip {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-left: 10px; /* Adjusted margin-left to position on the right side */
+    border: 2px solid #444;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    cursor: default;
+}
+
+
+.help-tip:before{
+    content:'?';
+    font-family: sans-serif;
+    font-weight: normal;
+    color:#444;
+}
+
+.help-tip:hover p{
+    display:block;
+    transform-origin: 100% 0%;
+    -webkit-animation: fadeIn 0.3s ease;
+    animation: fadeIn 0.3s ease;
+}
+
+/* The tooltip */
+.help-tip p {    
+    display: none;
+    font-family: sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    background-color: #FFFFFF;
+    padding: 12px 16px;
+    width: 178px;
+    height: auto;
+    position: absolute;
     left: 50%;
-    transform: translateX(-50%); /* Center the container */
-  }
-  
-  /* Play Again button */
-  #play-again {
-    background-color: #4CAF50;
-    color: white;
-    font-size: 1em;
-    padding: 10px 20px;
-    margin-top: 20px;
-    cursor: pointer;
-    display: block; /* Make it a block element to center it */
-    margin: 20px auto; /* Center the button */
-  }
+    transform: translate(-50%, 5%);
+    border-radius: 3px;
+    /* 	border: 1px solid #E0E0E0; */
+    box-shadow: 0 0px 20px 0 rgba(0,0,0,0.1);
+    color: #37393D;
+    font-size: 12px;
+    line-height: 18px;
+    z-index: 99;
+}
+
+.help-tip p a {
+    color: #067df7;
+    text-decoration: none;
+}
+
+    .help-tip p a:hover {
+    text-decoration: underline;
+}
+
+/* The pointer of the tooltip */
+.help-tip p:before { 
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color:#FFFFFF;
+    top: -9px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Prevents the tooltip from being hidden */
+.help-tip p:after {
+    width: 10px;
+    height: 40px;
+    content:'';
+    position: absolute;
+    top: -40px;
+    left: 0;
+}
+
+/* CSS animation */
+@-webkit-keyframes fadeIn {
+    0% { opacity:0; }
+    100% { opacity:100%; }
+}
+
+@keyframes fadeIn {
+    0% { opacity:0; }
+    100% { opacity:100%; }
+}
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+#RTsbs-459,
+#RTsbsr-459 {
+    padding: var(--sectionPadding);
+}
+#RTsbs-459,
+#RTsbsr-459 {
+    margin-bottom: 2rem; /* Add margin space */
+}
+#RTsbs-459 .cs-container,
+#RTsbsr-459 .cs-container{
+    width: 100%;
+    max-width: 80rem;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    margin-top: 0 !important;
+}
+#RTsbs-459 .cs-content,
+#RTsbsr-459 .cs-content {
+    text-align: left;
+    width: auto;
+    max-width: 40.625rem;
+    height: 320px;
+    margin: 0 1rem;
+    margin-top: 0 !important;
+
+    padding-top: 30px;
+    padding-left: 30px;
+    background-color: #fafbfc;
+    /* prevents padding from affecting width and height */
+    box-sizing: border-box;
+    border-radius: 0.75rem;
+    /* clips the pseudo element */
+    overflow: hidden;
+    box-shadow: 0px 24px 54px #0000001f;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+}
+#RTsbs-459 .cs-content:before,
+#RTsbsr-459 .cs-content:before {
+    /* green border top */
+    content: "";
+    width: 100%;
+    height: 0.5rem;
+    background: var(--primary);
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+}
+
+#RTsbs-459 .cs-text,
+#RTsbsr-459 .cs-text {
+    font-size: 16px; /* Adjust font size */
+    font-family: 'Poppins', sans-serif; /* Use the desired font */
+    line-height: 1.5; /* Adjust line height if needed */    
+}
+ 
+#RTsbs-459 .cs-button-solid,
+#RTsbsr-459 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #4d3737;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+}
+#RTsbs-459 .cs-button-solid:before,
+#RTsbsr-459 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+}
+#RTsbs-459 .cs-button-solid:hover:before,
+#RTsbsr-459 .cs-button-solid:hover:before {
+    width: 100%;
+}
+#RTsbs-459 .cs-picture,
+#RTsbsr-459 .cs-picture {
+    width: 100%;
+    height: auto;
+    height: 27.6875rem;
+    /* clips the img corners */
+    overflow: hidden;
+    border-radius: 1.5rem;
+    display: block;
+    /* sends it to the top */
+    order: -1;
+    position: relative;
+}
+#RTsbs-459 .cs-picture img,
+#RTsbsr-459 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+#RTsbs-459 .cs-container,
+#RTsbsr-459 .cs-container {
+    padding: 3.75rem 0;
+    position: relative;
+    align-items: flex-end;
+    justify-content: center;
+}
+#RTsbs-459 .cs-content,
+#RTsbsr-459 .cs-content {
+    width: 65%;
+    margin: 0;
+}
+#RTsbs-459 .cs-picture,
+#RTsbsr-459 .cs-picture {
+    /* 465px - 617px */
+    width: clamp(29.0625rem, 53vw, 38.5625rem);
+    position: absolute;
+    left: 0;
+    height: 100%;
+}
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+#RTsbs-459 .cs-content,
+#RTsbsr-459 .cs-content {
+    /* 90px - 108px */
+    margin-right: clamp(5rem, 8.5vw, 6.75rem);
+}
+}
+
+/*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+#RTsbsr-459 {
+    height: 500px;
+}
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+#RTsbsr-459 .cs-container {
+    align-items: flex-start;
+    
+}
+#RTsbsr-459 .cs-picture {
+    left: auto;
+    right: 0;
+}
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+#RTsbsr-459 .cs-content {
+    margin-right: 0;
+    /* 90px - 108px */
+    margin-left: clamp(5rem, 8.5vw, 6.75rem);
+    
+}
+}
+
+.small-text li {
+font-size: 0.9em; /* Adjust the font size as needed */
+}
+
