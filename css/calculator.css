@@ -602,211 +602,6 @@ h6,
     margin-top: 30px !important;
    }
 
-* {
-     margin: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
-body {
-    background-color: #2274A5;
-}
-
-.calc-all-container {
-    display: flex;
-    justify-content: center; /* Center the calculator section horizontally */
-    align-items: center; /* Center the calculator section vertically */
-    height: 100vh; /* Make the container take the full height of the viewport */
-
-}
-
-.calc-container {
-    text-align: center; /* Center align all content */
-    height: 600px;
-    padding: 20px; /* Add padding to the content within the calculator */
-    
-}
-
-.calc-container h2 {
-    margin-top: 40px; /* Add more space on the top */
-    margin-bottom: 20px; /* Add some space below the header for better appearance */
-}
- 
-.input-wrapper {
-    justify-content: center; /* Center the calculator section horizontally */
-    width: 500px;
-    padding: 20px; /* Add padding to the content within the calculator */
-    background-color: #ffffff;
-    padding: 1.87em 1.5em;
-    border-radius: 0.5em;
-    border: 0.5px solid #2d90c9;
-    box-shadow: 0 0.93em 1.25em rgba(0, 0, 0, 0.3);
-    margin-top: 10px;
-    margin-left: 200px;
-    margin-bottom: 50px;
-    display: grid;
-    grid-template-columns: 9fr 3fr;
-    gap: 1em;
-}
- 
-
-input {
-    font-weight: 500;
-    border-radius: 0.31em;
-    border: 3px solid #2274A5;
-    cursor: pointer; /* Add this line to change cursor to pointer */
-    background-color: #eeeeff;
-    color: #080808;
-    padding: 1.2em 1.25em;
-    font-size: 0.87em;
-    border: none;
-    outline: none;
-  }
-
-button {
-    font-weight: 500;
-    border-radius: 0.31em;
-    cursor: pointer; /* Add this line to change cursor to pointer */
-    color: #000000;
-    background-color: #2d90c9;
-    border: 0.5px solid #eeeeff !important; /* Add a black border */
- }
-
-button:hover {
-    color: #000000;
-    background-color: #58aad9;
-}
-
-.output-wrapper {
-    width: 100%; /* Adjust the width as needed */
-    margin: 0 auto; /* Center the container horizontally */
-    display: flex;
-    justify-content: space-between;
-}
-
-.output-wrapper div {
-    background-color: #59aada;
-    border-radius: 0.5em;
-    color: #080808;
-    padding: 1.5em 1em;
-    box-shadow: 0 0.5em 1em #0000001a;
-    text-align: center;
-    transition: transform 0.3s ease;
-    margin-right: 50px;
-    margin-left: 50px;
-    width: 200px; /* Adjust the width for better alignment */
-}
-
-.output-wrapper div:hover {
-    transform: translateY(-0.2em);
-}
-
-.output-wrapper div p {
-    font-size: 1em; /* Increase font size for better readability */
-    color: #000000;
-    margin-bottom: 0.5em;
-}
-
-span {
-    font-size: 1.8em; /* Adjust the font size to your preference */
-    font-weight: 500;
-    color: #FE5D37;
-}
-
-.calc-container span {
-    color: #e6e2e1; /* Change the color to your desired color */
-}
-
-
-p {
-    font-size: 0.87em;
-    color: #707070;
-    font-weight: 400;
-}
-
-.help-tip {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 20px;
-    margin-left: 10px; /* Adjusted margin-left to position on the right side */
-    border: 2px solid #444;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    font-size: 18px;
-    cursor: default;
-}
-
-
-.help-tip:before{
-    content:'?';
-    font-family: sans-serif;
-    font-weight: normal;
-    color:#444;
-}
-
-.help-tip:hover p{
-    display:block;
-    transform-origin: 100% 0%;
-    -webkit-animation: fadeIn 0.3s ease;
-    animation: fadeIn 0.3s ease;
-}
-
-/* The tooltip */
-.help-tip p {    
-    display: none;
-    font-family: sans-serif;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    text-align: center;
-    background-color: #FFFFFF;
-    padding: 12px 16px;
-    width: 178px;
-    height: auto;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 5%);
-    border-radius: 3px;
-    /* 	border: 1px solid #E0E0E0; */
-    box-shadow: 0 0px 20px 0 rgba(0,0,0,0.1);
-    color: #37393D;
-    font-size: 12px;
-    line-height: 18px;
-    z-index: 99;
-}
-
-.help-tip p a {
-    color: #067df7;
-    text-decoration: none;
-}
-
-    .help-tip p a:hover {
-    text-decoration: underline;
-}
-
-/* The pointer of the tooltip */
-.help-tip p:before { 
-    position: absolute;
-    content: '';
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    border-bottom-color:#FFFFFF;
-    top: -9px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Prevents the tooltip from being hidden */
-.help-tip p:after {
-    width: 10px;
-    height: 40px;
-    content:'';
-    position: absolute;
-    top: -40px;
-    left: 0;
-}
-
 /* CSS animation */
 @-webkit-keyframes fadeIn {
     0% { opacity:0; }
@@ -1014,3 +809,287 @@ p {
 font-size: 0.9em; /* Adjust the font size as needed */
 }
 
+
+.help-tip {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-left: 10px; /* Adjusted margin-left to position on the right side */
+    border: 2px solid #444;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    cursor: default;
+}
+
+
+.help-tip:before{
+    content:'?';
+    font-family: sans-serif;
+    font-weight: normal;
+    color:#444;
+}
+
+.help-tip:hover p{
+    display:block;
+    transform-origin: 100% 0%;
+    -webkit-animation: fadeIn 0.3s ease;
+    animation: fadeIn 0.3s ease;
+}
+
+/* The tooltip */
+.help-tip p {    
+    display: none;
+    font-family: sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    background-color: #FFFFFF;
+    padding: 12px 16px;
+    width: 178px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 5%);
+    border-radius: 3px;
+    /* 	border: 1px solid #E0E0E0; */
+    box-shadow: 0 0px 20px 0 rgba(0,0,0,0.1);
+    color: #37393D;
+    font-size: 12px;
+    line-height: 18px;
+    z-index: 99;
+}
+
+.help-tip p a {
+    color: #067df7;
+    text-decoration: none;
+}
+
+    .help-tip p a:hover {
+    text-decoration: underline;
+}
+
+/* The pointer of the tooltip */
+.help-tip p:before { 
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color:#FFFFFF;
+    top: -9px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Prevents the tooltip from being hidden */
+.help-tip p:after {
+    width: 10px;
+    height: 40px;
+    content:'';
+    position: absolute;
+    top: -40px;
+    left: 0;
+}
+
+
+
+* {
+     margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #2274A5;
+}
+
+.calc-all-container {
+    display: flex;
+    justify-content: center; /* Center the calculator section horizontally */
+    align-items: center; /* Center the calculator section vertically */
+}
+
+.calc-container {
+    text-align: center; /* Center align all content */
+    height: 400px;
+    padding: 20px; /* Add padding to the content within the calculator */
+    
+}
+
+.calc-container h2 {
+    margin-top: 40px; /* Add more space on the top */
+    margin-bottom: 20px; /* Add some space below the header for better appearance */
+}
+ 
+.input-wrapper {
+    align-items: center; /* Center the calculator section vertically */
+    justify-content: center; /* Center the calculator section horizontally */
+    width: 500px;
+     background-color: #ffffff;
+    padding: 1.87em 1.5em;
+    border-radius: 0.5em;
+    border: 0.5px solid #2d90c9;
+    box-shadow: 0 0.93em 1.25em rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+    margin-left: 200px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 1em;
+}
+ 
+
+input {
+    font-weight: 500;
+    border-radius: 0.31em;
+    border: 3px solid #2274A5;
+    cursor: pointer; /* Add this line to change cursor to pointer */
+    background-color: #eeeeff;
+    color: #080808;
+    padding: 1.2em 1.25em;
+    font-size: 0.87em;
+    border: none;
+    outline: none;
+  }
+
+button {
+    font-weight: 500;
+    border-radius: 0.31em;
+    cursor: pointer; /* Add this line to change cursor to pointer */
+    color: #000000;
+    background-color: #2d90c9;
+    border: 0.5px solid #eeeeff !important; /* Add a black border */
+ }
+
+button:hover {
+    color: #000000;
+    background-color: #58aad9;
+}
+
+span {
+    font-size: 1.8em; /* Adjust the font size to your preference */
+    font-weight: 500;
+    color: #FE5D37;
+}
+
+.calc-container span {
+    color: #e6e2e1; /* Change the color to your desired color */
+}
+
+
+p {
+    font-size: 0.87em;
+    color: #707070;
+    font-weight: 400;
+}
+
+.timeline-wrapper {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    height: 500px;
+    overflow-x: hidden; /* Remove horizontal scrolling */
+}
+.timeline-wrapper .middle-line {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #d9d9d9;
+}
+
+.box {
+    position: relative; /* Make the box position relative */
+    width: calc(100% / 8);
+    max-width: 150px; /* Set a fixed width for each box */
+    height: 500px;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-right: 5px;
+}
+.box:hover {
+    transform: scale(1.05);
+}
+
+.date {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px; /* Adjust the width as per your requirement */
+    height: 40px; /* Adjust the height as per your requirement */
+    border-radius: 100%;
+    background: #fff;
+    border: 2px solid #d9d9d9;
+    transition: background-color 0.3s ease;
+    padding: 5px; /* Adjust the padding as per your requirement */
+    margin: 2px; /* Adjust the margin as per your requirement */
+}
+
+.box:hover .date {
+    background-color: #00b0bd;
+}
+
+.date p {
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 0px;
+}
+
+.box .box-content {
+    border-radius: 5px;
+    background-color: #00b0bd;
+    width: 180px;
+    position: absolute;
+    left: 50%; /* Position relative to parent box */
+    transform: translateX(-50%); /* Center horizontally */
+    padding: 15px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+    top: calc(100% + 10px); /* Position below the parent box */
+}
+
+.box:hover .box-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+.box-content p {
+    margin: 0;
+    color: white;
+}
+
+.box-content::before {
+    content: " ";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid transparent;
+}
+
+.box-bottom .box-content {
+    top: 65%;
+}
+
+.box-content::before {
+    content: " ";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid transparent;
+}
+
+.box-bottom .box-content::before {
+    border-bottom-color: #00b0bd;
+    top: -20px;
+}
+
+.box-top .box-content::before {
+    border-top-color: #00b0bd;
+    bottom: -20px;
+}
