@@ -978,12 +978,12 @@ span {
     color: #e6e2e1; /* Change the color to your desired color */
 }
 
-
 p {
     font-size: 0.87em;
     color: #707070;
     font-weight: 400;
 }
+
 .timeline-wrapper {
     position: relative;
     width: 100%;
@@ -1042,7 +1042,7 @@ p {
 
 .box-content {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 10px); /* Adjusted to accommodate the pointer */
     left: 50%;
     transform: translateX(-50%);
     width: 200px;
@@ -1055,10 +1055,23 @@ p {
     transition: opacity 0.3s ease, visibility 0s linear 0.3s;
 }
 
+.box-content::before {
+    content: "";
+    position: absolute;
+    top: -20px; /* Adjusted position to be above the box content */
+    left: 50%;
+    margin-left: -10px; /* Half of the width of the pointer */
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #00b0bd transparent; /* Color of the pointer */
+    z-index: 1; /* Ensure the pointer is above the box content */
+}
+
 .box:hover .box-content {
     visibility: visible;
     opacity: 1;
 }
+
 
 .box-content p {
     margin: 0;
@@ -1070,8 +1083,17 @@ p {
     bottom: 100%;
     transform: translateX(-50%) translateY(-10px);
 }
+.box-top .box-content::before {
+    top: auto;
+    bottom: -20px; /* Adjusted position to be above the box content */
+    border-color: #00b0bd transparent transparent transparent; /* Color of the pointer */
+}
 
 .box-bottom .box-content {
     top: 100%;
     transform: translateX(-50%) translateY(10px);
+}
+
+#timeline-section {
+    display: none;
 }
