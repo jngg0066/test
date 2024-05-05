@@ -29,7 +29,6 @@
 
 }
 
-
 .footer .copyright a {
     color: #FFFFFF;
 }
@@ -42,8 +41,25 @@
     justify-content: center;
 }
 
-.footer .col-lg-3.col-md-6 {
-    text-align: center;
+.quick-links-wrapper {
+    display: flex;
+    justify-content: center; /* Center horizontally */
 }
 
- 
+.quick-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 20px; /* Increased gap */
+    justify-content: center; /* Center the columns */
+}
+
+.quick-links .column {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.quick-links .column a {
+    margin-bottom: 5px;
+}
+

@@ -13,7 +13,8 @@ const data = [
   "sandwich",
   "Biscuit or cookie",
   "McDonalds",
-  "Sunglasses"
+  "Sunglasses",
+  "sausage"
  
 ];
 
@@ -94,15 +95,16 @@ const drop = (e) => {
   const droppableElementData = e.target.getAttribute("data-id") || e.target.closest('.countries').getAttribute("data-id");
 
   if (id === droppableElementData) {
+    // Correct drop handling
     const imagePath = `img/${id}.png`;
     const newImage = new Image();
     newImage.src = imagePath;
     newImage.alt = id;
     newImage.style.width = "100%";
-    newImage.classList.add('dropped-img'); // Add a class for the dropped image
-
+    newImage.classList.add('dropped-img');
+    
     const dropZone = e.target.classList.contains('countries') ? e.target : e.target.closest('.countries');
-    dropZone.innerHTML = ''; 
+    dropZone.innerHTML = '';
     dropZone.appendChild(newImage);
     dropZone.classList.add("dropped");
 
@@ -111,20 +113,27 @@ const drop = (e) => {
     count += 1;
 
     // If all draggable items have been placed
-    if (count === draggableObjects.length) { 
+    if (count === draggableObjects.length) {
       stopGame(); // Call the stopGame function to show results
     }
+  } else {
+    // Display "Not Correct" message
+    const notCorrectMessage = document.getElementById("not-correct-message");
+    notCorrectMessage.classList.remove("hide");
+    setTimeout(() => {
+      notCorrectMessage.classList.add("hide");
+    }, 2000); // Hide the message after 2 seconds (adjust as needed)
   }
 };
 
 
-//Creates flags and countries
+//Creates slang and meaning
 const creator = () => {
   dragContainer.innerHTML = "";
   dropContainer.innerHTML = "";
   let randomData = [];
   //for string random values in array
-  for (let i = 1; i <= 3; i++) {
+  for (let i = 1; i <= 4; i++) {
     let randomValue = randomValueGenerator();
     if (!randomData.includes(randomValue)) {
       randomData.push(randomValue);
@@ -144,7 +153,7 @@ const creator = () => {
 
     dragContainer.appendChild(flagDiv);
   }
-  //Sort the array randomly before creating country divs
+  //Sort the array randomly before creating slang divs
   randomData = randomData.sort(() => 0.5 - Math.random());
   for (let i of randomData) {
     const countryDiv = document.createElement("div");

@@ -48,9 +48,68 @@ const movesCounter = () => {
   moves.innerHTML = `<span>Moves:</span>${movesCount}`;
 };
 
-const generateRandom = (size = 4) => {
+const showCardsTemporarily = (cards) => {
+  cards.forEach(card => card.classList.add("flipped"));
+  setTimeout(() => {
+    cards.forEach(card => {
+      if (!card.classList.contains("matched")) {
+        card.classList.remove("flipped");
+      }
+    });
+    interval = setInterval(timeGenerator, 1000);  // Start timer after showing cards
+  }, 8000); // Show cards for 8 seconds
+};
+
+
+const startGame = () => {
+  movesCount = 0;
+  seconds = 0;
+  minutes = 0;
+  introContainer.classList.add("hide");
+  wrapper.classList.remove("hide");
+  stopButton.classList.remove("hide");
+  interval = setInterval(timeGenerator, 1000);
+  moves.textContent = `Moves: ${movesCount}`;
+  let cardValues = generateRandom();
+  matrixGenerator(cardValues);
+  setTimeout(() => showCardsTemporarily(document.querySelectorAll(".card-container")), 100);
+};
+
+const showGameRules = () => {
+  const gameRules = `
+    Game Rules for "Wildlife Wonders":
+    1. Objective: Match pairs of cards featuring various animals.
+    2. Click "Start Game" to shuffle and start.
+    3. Gameplay:
+       - Flip two cards to find a pair.
+       - Matching cards remain up.
+       - Non-matching cards flip back.
+    4. Win by matching all pairs. Fewer moves and less time are better.
+    5. Timer and moves counter are tracked.
+    6. Stop the game anytime with "Stop Game".
+    7. Restart by clicking "Start Game" after stopping or completing a game.
+  `;
+  alert(gameRules);
+};
+
+const stopGame = () => {
+  clearInterval(interval);
+  wrapper.classList.add("hide");
+  introContainer.classList.remove("hide");
+  stopButton.classList.add("hide");
+  startButton.classList.remove("hide");
+};
+
+
+const playAgain = () => {
+  result.classList.add("hide");
+  startGame();
+};
+
+const generateRandom = () => {
   let tempArray = [...items];
   let cardValues = [];
+  let size = 4;
   size = (size * size) / 2;
   for (let i = 0; i < size; i++) {
     const randomIndex = Math.floor(Math.random() * tempArray.length);
@@ -60,7 +119,58 @@ const generateRandom = (size = 4) => {
   return cardValues;
 };
 
-const matrixGenerator = (cardValues, size = 4) => {
+
+const matrixGenerator = (cardValues) => {
+  gameContainer.innerHTML = "";
+  cardValues = [...cardValues, ...cardValues];
+  cardValues.sort(() => Math.random() - 0.5);
+  cardValues.forEach((cardValue, index) => {
+    const cardElement = document.createElement("div");
+    cardElement.className = "card-container";
+    cardElement.setAttribute("data-card-value", cardValue.name);
+    cardElement.innerHTML = `
+      <div class="card-before"></div>
+      <div class="card-after">
+        <img src="${cardValue.image}" class="image"/>
+      </div>
+    `;
+    cardElement.addEventListener("click", cardClick);
+    gameContainer.appendChild(cardElement);
+  });
+  gameContainer.style.gridTemplateColumns = `repeat(4, auto)`;
+};
+
+const cardClick = (event) => {
+  const selectedCard = event.currentTarget;
+  if (!selectedCard.classList.contains("matched") && !selectedCard.classList.contains("flipped")) {
+    selectedCard.classList.add("flipped");
+    if (!firstCard) {
+      firstCard = selectedCard;
+    } else {
+      movesCounter();
+      secondCard = selectedCard;
+      if (firstCard.getAttribute("data-card-value") === secondCard.getAttribute("data-card-value")) {
+        firstCard.classList.add("matched");
+        secondCard.classList.add("matched");
+        firstCard = null;
+        secondCard = null;
+        winCount++;
+        if (winCount === items.length / 2) {
+          showGameOver();
+        }
+      } else {
+        setTimeout(() => {
+          firstCard.classList.remove("flipped");
+          secondCard.classList.remove("flipped");
+          firstCard = null;
+          secondCard = null;
+        }, 900);
+      }
+    }
+  }
+};
+
+/* const matrixGenerator = (cardValues, size = 4) => {
   gameContainer.innerHTML = "";
   cardValues = [...cardValues, ...cardValues];
   cardValues.sort(() => Math.random() - 0.5);
@@ -107,7 +217,7 @@ const matrixGenerator = (cardValues, size = 4) => {
       }
     });
   });
-};
+}; */
 
 const showGameOver = () => {
   clearInterval(interval);
@@ -118,38 +228,14 @@ const showGameOver = () => {
     <button id="play-again">Play Again</button>
   `;
   result.classList.remove("hide");
-  stopButton.classList.add("hide");
   document.getElementById("play-again").addEventListener("click", playAgain);
 };
 
-const startGame = () => {
-  movesCount = 0;
-  seconds = 0;
-  minutes = 0;
-  introContainer.classList.add("hide");
-  wrapper.classList.remove("hide");
-  stopButton.classList.remove("hide");
-  interval = setInterval(timeGenerator, 1000);
-  moves.innerHTML = `<span>Moves:</span> ${movesCount}`;
-  initializer();
-};
 
-const showGameRules = () => {
-  const gameRules = `
-    Game Rules for "Wildlife Wonders":
-    1. Objective: Match pairs of cards featuring various animals.
-    2. Click "Start Game" to shuffle and start.
-    3. Gameplay:
-       - Flip two cards to find a pair.
-       - Matching cards remain up.
-       - Non-matching cards flip back.
-    4. Win by matching all pairs. Fewer moves and less time are better.
-    5. Timer and moves counter are tracked.
-    6. Stop the game anytime with "Stop Game".
-    7. Restart by clicking "Start Game" after stopping or completing a game.
-  `;
-  alert(gameRules);
-};
+
+
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
   // Make sure the IDs match and are unique in the HTML
@@ -163,18 +249,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-const stopGame = () => {
-  clearInterval(interval);
-  wrapper.classList.add("hide");
-  introContainer.classList.remove("hide");
-  stopButton.classList.add("hide");
-  startButton.classList.remove("hide");
-};
-
-const playAgain = () => {
-  result.classList.add("hide");
-  startGame();
-};
 
 const initializer = () => {
   result.innerText = "";

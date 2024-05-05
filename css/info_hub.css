@@ -475,15 +475,15 @@ h6,
     background: var(--dark);
 }
 
-/* Latest News Buttons */
+
 .news-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    overflow: hidden; /* Hide overflowing content */
-    margin-bottom: 20px; /* Add margin between news items if desired */
+    overflow: hidden; 
+    margin-bottom: 20px; 
 }
 
 /* Center the contents of <div class="ps-3"> */
@@ -493,15 +493,15 @@ h6,
 }
  
 
-/* Increase margin-top for <p class="fs-5"> */
+
 .news-item .fs-5 {
-    margin-top: 40px; /* Adjust the margin-top value as needed */
+    margin-top: 40px; 
 }
 
 
 .news-item .btn {
     font-size: 14px;
-    padding: 10px 20px; /* Adjust padding to make the button shorter */
+    padding: 10px 20px; 
     margin-top: 30px;
     border-radius: 25px;
     background-color: var(--primary);
@@ -598,34 +598,37 @@ h6,
 }
 
 .collapsible-content {
-    background-color: #F2D8D8; /* Set the background color to a lighter shade */
-    padding: 15px; /* Add padding for better spacing */
-    border-radius: 10px; /* Add rounded corners for a nicer look */
+    background-color: #F2D8D8; 
+    border-radius: 10px; 
 }
 
 
 .collapsible-content p {
-    font-size: 14px; /* Adjust the font size as desired */
+    font-size: 14px; 
     text-align: center;
     margin-top: 20px;
 }
 
 .collapsible-content a {
-    display: block; /* Make the link a block-level element */
-    text-align: center; /* Center the text within its container */
+    display: block; 
+    text-align: center;
 }
 
 
 .divider {
-    width: 800px; /* Adjust width as needed */
-    height: 2px; /* Adjust height as needed */
-    background-color: #cccccc; /* Choose your desired color */
-    margin: 20px auto; /* Center the divider horizontally and adjust margin as needed */
+    width: 800px; 
+    height: 2px; 
+    background-color: #cccccc; 
+    margin: 20px auto; 
     margin-top: 50px;
     margin-bottom: 50px;
   }
 
 .arrow {
-    margin-left: 5px; /* Adjust the spacing between the text and the arrow */
-    margin-bottom: 2px; /* Add some space below the arrow */
+    margin-left: 5px; 
+    margin-bottom: 2px; 
+}
+
+.collapsible-content .custom-p {
+    font-size: 12px; /* Set your desired font size */
 }

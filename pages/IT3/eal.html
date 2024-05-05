@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Learning Compass - EAL Support</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="../../lib/animate/animate.min.css">
+    <link rel="stylesheet" href="../../lib/owlcarousel/assets/owl.carousel.min.css">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+
+    <!-- Template Stylesheet -->
+    <link href="/css/eal.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+  
+
+<body>
+    <div class="container-xxl bg-white p-0" >
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <div id="navbarContainer"></div>  
+
+        <!-- Page Header End -->
+        <div class="container-xxl py-5 page-header position-relative mb-5" style="background-image: url('../../img/curriculum-1.jpg');">
+            <div class="container py-5">
+                <h1 class="display-2 text-white animated slideInDown mb-4">EAL Support </h1>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+        <!-- Info Detail Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px; max-height: 50px;">
+                    <h2 class="mb-3">EAL: English as an additional language</h2>
+                    <p>It is a English literacy support program centraling around the learning and development. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Info Detail End -->
+        <div class="divider"></div>
+
+<!-- Aim/Benefit Start -->
+<div class="container-wrapper">
+    <div class="container">
+        <div class="border-container" style="border-color: #84e087;">
+            <h2>Aims</h2>
+            <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+
+            <p>
+                <strong>1. Diverse Communication:</strong> Encourage participation in listening, speaking, reading, writing, and digital/visual communication.
+            </p>
+            <p>
+                <strong>2. Standard Australian English:</strong> Understand and apply the rules of Standard Australian English in various forms of communication.
+            </p>
+            <p>
+                <strong>3. Utilize English Creatively:</strong> Foster creative use of English for expression, information sharing, idea generation, engagement, entertainment, persuasion, and argumentation.
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="border-container" style="border-color: #84e087;">
+            <h2>Benefits</h2>
+            <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+            <p> <strong>1. Fundamental Language Skills:</strong>Building vital language and literacy skills for effective communication and comprehension.</p>
+            <p> <strong>2. Plurilingual Awareness:</strong> Cultivate understanding of how individuals use different languages and their significance in shaping identities within society.</p>
+            <p> <strong>3. Enhanced Communication and Cultural Understanding:</strong> Develop communication skills, linguistic knowledge, and cultural understanding to facilitate integration into Australian society.</p>
+        </div>
+    </div>
+</div>
+<!-- Aim/Benefit End -->
+
+
+        <div class="divider"></div>
+
+        <!-- EAL data Start -->
+
+
+        <!-- EAL data End -->
+
+
+        <div class="divider"></div>
+
+        <!-- Level description Start -->  
+    <table>
+      <tr>
+        <th>Pathway</th>
+        <th>Level</th>
+      </tr>
+      <tr>
+        <td>Pathway A (Year: Foundation ~ Year 2)</td>
+        <td>
+            <button class = "button" data-level="A1" onclick="loadLevel('A1',event)">A1</button>           
+            <button class = "button" data-level="A2" onclick="loadLevel('A2',event)">A2</button>         
+        </td>
+      </tr>
+      <tr>
+        <td>Pathway B (Year: Year 3 ~ Year 8)</td>
+        <td>
+            <button class = "button" data-level="BL" onclick="loadLevel('BL',event)">BL</button>
+            <button  class = "button" data-level="B1" onclick="loadLevel('B1',event)">B1</button>         
+            <button  class = "button" data-level="B2" onclick="loadLevel('B2',event)">B2</button>        
+            <button   class = "button" data-level="B3" onclick="loadLevel('B3',event)">B3</button>
+        </td>
+      </tr>
+    </table>
+        <!-- Level description End -->
+
+    <!-- Add this below your table -->
+    <div id="level-detail-container" class="content-description"  style="margin-top: 20px;">
+        <div style="text-align: center;">
+            <label for="level-detail-dropdown" style="font-size: 20px; font-weight: bold; display: block;" >Mode:</label>
+            <select id="level-detail-dropdown" onchange="showDetails()" disabled style="width: 30%; margin: 20px auto; display: block;">
+                <option value="" disabled selected>Select a Mode</option> 
+                <option value="Reading and Viewing">Reading and Viewing</option>
+                <option value="Speaking and Listening">Speaking and Listening</option>
+                <option vvalue="Writing">Writing</option>
+            </select>
+        </div>
+        <div id="content-description"></div>
+    </div>
+    
+    
+
+   
+
+
+    <div id="footerContainer"></div>
+
+    <div> 
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../lib/wow/wow.min.js"></script>
+    <script src="../../lib/easing/easing.min.js"></script>
+    <script src="../../lib/waypoints/waypoints.min.js"></script>
+    <script src="../../lib/owlcarousel/owl.carousel.min.js"></script>    
+    <script src="../../js/eal.js"></script>
+    <!-- Template Javascript -->
+    <script src="../../js/navbar.js"></script>
+    <script src="../../js/main.js"></script>
+ 
+</body>
+</html>

@@ -249,7 +249,7 @@
     background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), center center no-repeat;
     background-size: cover;
   }
-  
+
   .breadcrumb-item + .breadcrumb-item::before {
     color: rgba(255, 255, 255, .5);
   }
@@ -336,7 +336,7 @@
     
     .section1 {
       background: #ffffff;
-      height: auto; /* Change to auto so it adjusts based on content */
+      height: auto; 
       padding: 20px;
     }
     .section1 h1 {
@@ -363,8 +363,8 @@
     }
     
     .tab-container {
-      display: flex; /* Change from default block layout to flex */
-      justify-content: center; /* Center the tabs horizontally */
+      display: flex; 
+      justify-content: center; 
       margin-bottom: 20px;
     }
     
@@ -388,9 +388,9 @@
     }
     
     .suburb-dropdown {
-      display: none; /* Initially hide dropdowns */
-      margin-top: 10px; /* Adjust margin as needed */
-      align-items: center; /* Center the dropdown horizontally */
+      display: none; 
+      margin-top: 10px; 
+      align-items: center; 
       margin-left: 80px;
       margin-bottom: 20px;
     }
@@ -404,19 +404,19 @@
     }
     
     .text-container {
-      border-radius: 10px; /* Rounded edges */
-      width: 950px; /* Same width as the map with padding */
-      margin: auto; /* Center the container horizontally */
-      padding: 20px; /* Add padding */
-      background-color: rgba(255, 255, 255, 0.8); /* Background color with opacity */
-      margin-bottom: 20px; /* Add margin to separate containers */
+      border-radius: 10px; 
+      width: 950px; 
+      margin: auto; 
+      padding: 20px; 
+      background-color: rgba(255, 255, 255, 0.8); 
+      margin-bottom: 20px; 
     }
     
     .text-container.active {
       background-color: rgba(255, 255, 255, 0.548);
-      border: 2px solid #ef9090; /* Colored border */
-      padding: 20px; /* Add some padding */
-      margin-bottom: 20px; /* Add some margin */
+      border: 2px solid #ef9090; 
+      padding: 20px; 
+      margin-bottom: 20px; 
     }
     
     .text-container h2 {
@@ -424,7 +424,7 @@
       line-height: 1;
       letter-spacing: 1px;
       text-align: center;
-      color: black; /* Change to your desired font color */
+      color: black; 
       margin-bottom: 20px;
     }
     
@@ -433,15 +433,15 @@
       line-height: 1;
       letter-spacing: 1px;
       text-align: justify;
-      color: black; /* Change to your desired font color */
+      color: black; 
       margin-bottom: 10px;
       margin-left: 20px;
       margin-right: 20px;
     }
   
     .text-container ul {
-      list-style-type: disc; /* Use disc style for bullet points */
-      margin-left: 20px; /* Adjust indentation as needed */
+      list-style-type: disc; 
+      margin-left: 20px;
     }
     
     .text-container ul li {
@@ -452,21 +452,21 @@
     }
     
     #map {
-      width: 950px; /* Adjust width as needed */
-      height: 600px; /* Adjust height as needed */
-      border-radius: 10px; /* Adjust the radius as needed */
-      overflow: hidden; /* Ensure content inside map doesn't overflow rounded corners */
-      margin: auto; /* Center the map horizontally */
+      width: 950px; 
+      height: 600px; 
+      border-radius: 10px; 
+      overflow: hidden; 
+      margin: auto; 
       display: flex;
-      justify-content: center; /* Center the map horizontally */
-      align-items: center; /* Center the map vertically */
+      justify-content: center; 
+      align-items: center; 
   }
   
   .container.py-5 {
     color: #ffffff;
     text-align: left;
     margin-left: 100px;
-    margin-right: 100px; /* Added margin on the right */
+    margin-right: 100px; 
     min-height: 300px;
   }
   
@@ -476,21 +476,21 @@
     background-color: #cccccc;
     margin: 20px auto;
     margin-top: 25px;
-    margin-bottom: 20px; /* Adjusted margin-bottom value */
+    margin-bottom: 20px; 
   }
   
     
   .help-tip {
-    position: relative; /* Change position to relative */
-    display: inline-block; /* Change display to inline-block */
+    position: relative; 
+    display: inline-block; 
     margin-top: 5px;
-    margin-left: 30px; /* Adjust margin as needed */
+    margin-left: 30px; 
     text-align: center;
     border: 2px solid #444;
     border-radius: 50%;
-    width: 30px; /* Adjusted width */
-    height: 30px; /* Adjusted height */
-    font-size: 18px; /* Adjusted font size */
+    width: 30px; 
+    height: 30px; 
+    font-size: 18px;
     cursor: default;
   }
   
@@ -577,28 +577,80 @@
   .content-description {
     margin-top: 20px;
     padding: 15px;
-    background-color: #f4f4f4;
+    background-color: #f4caae38;
     border-radius: 5px;
     font-size: 16px; 
+    border-radius: 12px;
 }
 /* dropdown styling*/
 .curriculum-selection select {
-  width: 50%; /* Adjusts the width of each dropdown */
-  padding: 10px; /* Adds padding inside the dropdown for better readability */
-  margin: 0 10px; /* Spaces out the dropdowns */
-  font-size: 14px; /* Increases the font size for better visibility */
-  border: 1px solid #ccc; /* Adds a subtle border */
-  border-radius: 5px; /* Rounds the corners of the dropdowns */
+  width: 70%; 
+  padding: 10px; 
+  margin: 0 5px; 
+  font-size: 14px; 
+  border: 3.5px solid #ee720d; 
+  border-radius: 12px; 
 }
 
 .curriculum-selection {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap; /* Allows the items to wrap in smaller screens */
+  flex-wrap: wrap; 
 }
 
 .curriculum-selection div {
-  flex-grow: 1; /* Allows each dropdown to grow and fill the space */
-  text-align: center; /* Centers the text inside the dropdown */
+  flex-grow: 1; 
+  text-align: center; 
+}
+.content-box, .video-box {
+  background-color: #f89a3c4c; 
+  padding: 30px;
+  border-radius: 25px; 
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1); 
+  margin-bottom: 30px;
+  height: 315px
+}
+
+.video-box iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px; 
+}
+
+@media (max-width: 768px) {
+  .content-box, .video-box {
+    margin-bottom: 20px;
+    height: auto; 
+  }
+}
+.accordion-button:not(.collapsed) {
+  color: #007bff;
+  background-color: #e9ecef;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
+}
+
+.accordion-item {
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-radius: .25rem;
+}
+
+.cur-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cur-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ee720d;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cur-button:hover {
+  background-color: #ee720d;
+  color: #000000;
 }

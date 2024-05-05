@@ -10,7 +10,7 @@
  /* Specific styles for the slang game */
 .container_slang {
     width: 90%;
-    max-width: 37.5em;
+    max-width: 44em;
     margin: 2em auto; /* Centers the container and adds space above and below */
     background-color: #5372ef;
     padding: 2em;
@@ -84,3 +84,20 @@
 .hide {
     display: none;
 }
+
+.not-correct-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #ff0000; /* Red background color */
+    color: #ffffff; /* White text color */
+    font-size: 18px;
+    border-radius: 5px;
+    z-index: 9999;
+  }
+  
+  .hide {
+    display: none;
+  }

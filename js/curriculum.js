@@ -88,7 +88,7 @@ function fetchDescription() {
                 item.Level === level
             );
             if (contentItem) {
-                document.getElementById('contentDescription').innerHTML = contentItem.Content_Description;
+                document.getElementById('contentDescription').innerHTML = formatContent(contentItem.Content_Description);
             } else {
                 document.getElementById('contentDescription').innerHTML = 'No content found for the selected options.';
             }
@@ -97,4 +97,115 @@ function fetchDescription() {
             console.error('Fetching error:', error);
             document.getElementById('contentDescription').innerHTML = 'Error fetching content. Please try again later.';
         });
+}
+
+// function formatContent(content) {
+//     const lines = content.split('<br>'); 
+//     let contentMap = new Map();
+//     let formattedContent = '';
+
+//     lines.forEach(line => {
+//         line = line.replace(/<\/?b>/g, '');  
+//         console.log("Processing line:", line);
+//         const parts = line.split(':');
+//         if (parts.length < 2) {
+//             console.log("Skipping line due to incorrect format:", line);
+//             return; 
+//         }
+//         const heading = parts[0].trim() + ':';
+//         const body = parts.slice(1).join(':').trim();
+
+//         if (!contentMap.has(heading)) {
+//             contentMap.set(heading, []);
+//         }
+//         contentMap.get(heading).push(body);
+//     });
+
+//     contentMap.forEach((descriptions, heading) => {
+//         formattedContent += `<h4 style="font-size: smaller;"><b>${heading}</b></h4><ul>`;
+//         descriptions.forEach(description => {
+//             formattedContent += `<li>${description}</li>`;
+//         });
+//         formattedContent += `</ul>`;
+//     });
+
+//     return formattedContent;
+// }
+
+function formatContent(content) {
+    const lines = content.split('<br>'); 
+    let contentMap = new Map();
+    let formattedContent = '<div class="accordion" id="accordionContent">';
+
+    lines.forEach(line => {
+        line = line.replace(/<\/?b>/g, '');
+        const parts = line.split(':');
+        if (parts.length < 2) {
+            return;  
+        }
+        const heading = parts[0].trim();
+        const body = parts.slice(1).join(':').trim();
+
+        if (!contentMap.has(heading)) {
+            contentMap.set(heading, []);
+        }
+        contentMap.get(heading).push(body);
+    });
+
+    let index = 0;
+    contentMap.forEach((descriptions, heading) => {
+        const collapseId = `collapse${index}`;
+        const headingId = `heading${index}`;
+        formattedContent += `
+<div class="accordion-item">
+    <h2 class="accordion-header" id="${headingId}">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${collapseId}" aria-expanded="false" aria-controls="${collapseId}">
+            ${heading}
+        </button>
+    </h2>
+    <div id="${collapseId}" class="accordion-collapse collapse" aria-labelledby="${headingId}">
+        <div class="accordion-body">
+            <ul>`;
+        descriptions.forEach(description => {
+            formattedContent += `<li>${description}</li>`;
+        });
+        formattedContent += `</ul>
+        </div>
+    </div>
+</div>`;
+        index++;
+    });
+
+    formattedContent += '</div>';
+    return formattedContent;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const firstDropdown = document.getElementById("dropdownMenuTab1");
+    const secondDropdown = document.getElementById("dropdownMenuTab2");
+    const thirdDropdown = document.getElementById("dropdownMenuTab3");
+    const buttonContainer = document.querySelector(".cur-button-container");
+
+    firstDropdown.addEventListener("change", function() {
+        updateDropdown(secondDropdown, disciplines[firstDropdown.value] || []);
+        resetDropdown(thirdDropdown);
+        toggleButtonVisibility();
+    });
+
+    secondDropdown.addEventListener("change", function() {
+        updateDropdown(thirdDropdown, levels[secondDropdown.value] || []);
+        toggleButtonVisibility();
+    });
+
+    thirdDropdown.addEventListener("change", function() {
+        toggleButtonVisibility();
+    });
+
+    function toggleButtonVisibility() {
+        if (firstDropdown.value === "English" && secondDropdown.value && thirdDropdown.value) {
+            buttonContainer.style.display = "block";
+        } else {
+            buttonContainer.style.display = "none";
+        }
     }
+});
